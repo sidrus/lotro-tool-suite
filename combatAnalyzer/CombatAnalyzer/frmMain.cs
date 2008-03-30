@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.IO;
 
 namespace CombatAnalyzer
 {
@@ -17,13 +18,10 @@ namespace CombatAnalyzer
         {
             InitializeComponent();
 
-            OpenFileDialog dlg = new OpenFileDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
+            // Check for the grammar
+            if (!File.Exists(@"grammar\CombatSpam.g"))
             {
-                l = Parser.ParseLog(dlg.FileName);
-                analyzeTargets();
-                analyzeSkills();
-                analyzeDmgType();
+                MessageBox.Show("Cannot locate the grammar file.");
             }
         }
 
@@ -158,6 +156,18 @@ namespace CombatAnalyzer
                 lst.ListViewItemSorter = new ListViewItemComparer(e.Column, !c.Ascending);
             else
                 lst.ListViewItemSorter = new ListViewItemComparer(e.Column);
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                l = Parser.ParseLog(dlg.FileName);
+                analyzeTargets();
+                analyzeSkills();
+                analyzeDmgType();
+            }
         }
     }
 }

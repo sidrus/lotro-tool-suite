@@ -218,6 +218,7 @@ namespace CombatAnalyzer
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Text = "LOTRO Combat Analyzer";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpTgtAnalysis.ResumeLayout(false);
             this.tpSkillAnalysis.ResumeLayout(false);
