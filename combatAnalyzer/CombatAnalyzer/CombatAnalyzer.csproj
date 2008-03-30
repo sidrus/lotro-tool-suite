@@ -42,8 +42,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="grammar\CombatSpamLexer.cs" />
-    <Compile Include="grammar\CombatSpamParser.cs" />
+    <Compile Include="grammar\CombatSpamLexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="grammar\CombatSpamParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ListViewItemComparer.cs" />
     <Compile Include="ParsedLog.cs" />
     <Compile Include="ParsedLogEntry.cs" />
@@ -75,6 +79,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="grammar\antlr.runtime.dll" />
+    <Content Include="grammar\Antlr3.Runtime.dll" />
+    <Content Include="grammar\Antlr3.Utility.dll" />
+    <Content Include="grammar\StringTemplate.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
