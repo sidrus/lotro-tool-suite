@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g 2008-03-29 21:35:50
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g 2008-03-30 01:06:29
 
 using System;
 using Antlr.Runtime;
@@ -74,13 +74,13 @@ public class CombatSpamParser : DebugParser
 
     override public string GrammarFileName
 	{
-		get { return "C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g"; }
+		get { return "C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g"; }
 	}
 
 
     
     // $ANTLR start combatLine
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:26:1: combatLine : combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )? ;
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:26:1: combatLine : combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )? ;
     public void combatLine() // throws RecognitionException [1]
     {   
         try 
@@ -92,10 +92,10 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:2: ( combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:2: ( combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )? )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:4: combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )?
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:4: combatant verb ( combatant )? ( prep ( skill )+ )? ( prep damageAmount POINTS ) ( prep damageType ( DAMAGE )? )? ( NEWLINE )?
             {
             	dbg.Location(27,4);
             	PushFollow(FOLLOW_combatant_in_combatLine129);
@@ -108,7 +108,7 @@ public class CombatSpamParser : DebugParser
             	followingStackPointer_--;
 
             	dbg.Location(27,19);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:19: ( combatant )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:19: ( combatant )?
             	int alt1 = 2;
             	try { dbg.EnterSubRule(1);
             	try { dbg.EnterDecision(1);
@@ -126,7 +126,7 @@ public class CombatSpamParser : DebugParser
             	    case 1 :
             	        dbg.EnterAlt(1);
             	    
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:20: combatant
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:20: combatant
             	        {
             	        	dbg.Location(27,20);
             	        	PushFollow(FOLLOW_combatant_in_combatLine134);
@@ -141,7 +141,7 @@ public class CombatSpamParser : DebugParser
             	} finally { dbg.ExitSubRule(1); }
 
             	dbg.Location(27,32);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:32: ( prep ( skill )+ )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:32: ( prep ( skill )+ )?
             	int alt3 = 2;
             	try { dbg.EnterSubRule(3);
             	try { dbg.EnterDecision(3);
@@ -164,7 +164,7 @@ public class CombatSpamParser : DebugParser
             	    case 1 :
             	        dbg.EnterAlt(1);
             	    
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:33: prep ( skill )+
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:33: prep ( skill )+
             	        {
             	        	dbg.Location(27,33);
             	        	PushFollow(FOLLOW_prep_in_combatLine139);
@@ -172,7 +172,7 @@ public class CombatSpamParser : DebugParser
             	        	followingStackPointer_--;
 
             	        	dbg.Location(27,38);
-            	        	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:38: ( skill )+
+            	        	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:38: ( skill )+
             	        	int cnt2 = 0;
             	        	try { dbg.EnterSubRule(2);
             	        	
@@ -196,7 +196,7 @@ public class CombatSpamParser : DebugParser
             	        			case 1 :
             	        			    dbg.EnterAlt(1);
             	        			
-            	        			    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:38: skill
+            	        			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:38: skill
             	        			    {
             	        			    	dbg.Location(27,38);
             	        			    	PushFollow(FOLLOW_skill_in_combatLine141);
@@ -230,10 +230,10 @@ public class CombatSpamParser : DebugParser
             	} finally { dbg.ExitSubRule(3); }
 
             	dbg.Location(27,47);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:47: ( prep damageAmount POINTS )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:47: ( prep damageAmount POINTS )
             	dbg.EnterAlt(1);
             	
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:48: prep damageAmount POINTS
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:48: prep damageAmount POINTS
             	{
             		dbg.Location(27,48);
             		PushFollow(FOLLOW_prep_in_combatLine147);
@@ -251,7 +251,7 @@ public class CombatSpamParser : DebugParser
             	}
 
             	dbg.Location(27,74);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:74: ( prep damageType ( DAMAGE )? )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:74: ( prep damageType ( DAMAGE )? )?
             	int alt5 = 2;
             	try { dbg.EnterSubRule(5);
             	try { dbg.EnterDecision(5);
@@ -269,7 +269,7 @@ public class CombatSpamParser : DebugParser
             	    case 1 :
             	        dbg.EnterAlt(1);
             	    
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:75: prep damageType ( DAMAGE )?
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:75: prep damageType ( DAMAGE )?
             	        {
             	        	dbg.Location(27,75);
             	        	PushFollow(FOLLOW_prep_in_combatLine155);
@@ -282,7 +282,7 @@ public class CombatSpamParser : DebugParser
             	        	followingStackPointer_--;
 
             	        	dbg.Location(27,91);
-            	        	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:91: ( DAMAGE )?
+            	        	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:91: ( DAMAGE )?
             	        	int alt4 = 2;
             	        	try { dbg.EnterSubRule(4);
             	        	try { dbg.EnterDecision(4);
@@ -300,7 +300,7 @@ public class CombatSpamParser : DebugParser
             	        	    case 1 :
             	        	        dbg.EnterAlt(1);
             	        	    
-            	        	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:92: DAMAGE
+            	        	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:92: DAMAGE
             	        	        {
             	        	        	dbg.Location(27,92);
             	        	        	Match(input,DAMAGE,FOLLOW_DAMAGE_in_combatLine160); 
@@ -319,7 +319,7 @@ public class CombatSpamParser : DebugParser
             	} finally { dbg.ExitSubRule(5); }
 
             	dbg.Location(27,103);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:103: ( NEWLINE )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:103: ( NEWLINE )?
             	int alt6 = 2;
             	try { dbg.EnterSubRule(6);
             	try { dbg.EnterDecision(6);
@@ -337,7 +337,7 @@ public class CombatSpamParser : DebugParser
             	    case 1 :
             	        dbg.EnterAlt(1);
             	    
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:27:103: NEWLINE
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:27:103: NEWLINE
             	        {
             	        	dbg.Location(27,103);
             	        	Match(input,NEWLINE,FOLLOW_NEWLINE_in_combatLine166); 
@@ -376,7 +376,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start verb
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:30:1: verb : ( WOUND | WOUNDS | ARE_WOUNDED );
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:30:1: verb : ( WOUND | WOUNDS | ARE_WOUNDED );
     public void verb() // throws RecognitionException [1]
     {   
         try 
@@ -388,10 +388,10 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:30:7: ( WOUND | WOUNDS | ARE_WOUNDED )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:30:7: ( WOUND | WOUNDS | ARE_WOUNDED )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:
             {
             	dbg.Location(30,7);
             	if ( (input.LA(1) >= WOUND && input.LA(1) <= ARE_WOUNDED) ) 
@@ -435,7 +435,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start prep
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:31:1: prep : ( WITH | FOR | OF | FROM );
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:31:1: prep : ( WITH | FOR | OF | FROM );
     public void prep() // throws RecognitionException [1]
     {   
         try 
@@ -447,10 +447,10 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:31:7: ( WITH | FOR | OF | FROM )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:31:7: ( WITH | FOR | OF | FROM )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:
             {
             	dbg.Location(31,7);
             	if ( (input.LA(1) >= WITH && input.LA(1) <= FROM) ) 
@@ -494,7 +494,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start combatant
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:32:1: combatant : ( CHARS )+ ;
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:32:1: combatant : ( CHARS )+ ;
     public void combatant() // throws RecognitionException [1]
     {   
         try 
@@ -506,13 +506,13 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:32:11: ( ( CHARS )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:32:11: ( ( CHARS )+ )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:32:13: ( CHARS )+
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:32:13: ( CHARS )+
             {
             	dbg.Location(32,13);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:32:13: ( CHARS )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:32:13: ( CHARS )+
             	int cnt7 = 0;
             	try { dbg.EnterSubRule(7);
             	
@@ -536,7 +536,7 @@ public class CombatSpamParser : DebugParser
             			case 1 :
             			    dbg.EnterAlt(1);
             			
-            			    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:32:13: CHARS
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:32:13: CHARS
             			    {
             			    	dbg.Location(32,13);
             			    	Match(input,CHARS,FOLLOW_CHARS_in_combatant213); 
@@ -587,7 +587,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start skill
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:1: skill : ( CHARS )+ ( prep )? ;
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:1: skill : ( CHARS )+ ( prep )? ;
     public void skill() // throws RecognitionException [1]
     {   
         try 
@@ -599,13 +599,13 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:8: ( ( CHARS )+ ( prep )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:8: ( ( CHARS )+ ( prep )? )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:10: ( CHARS )+ ( prep )?
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:10: ( CHARS )+ ( prep )?
             {
             	dbg.Location(33,10);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:10: ( CHARS )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:10: ( CHARS )+
             	int cnt8 = 0;
             	try { dbg.EnterSubRule(8);
             	
@@ -629,7 +629,7 @@ public class CombatSpamParser : DebugParser
             			case 1 :
             			    dbg.EnterAlt(1);
             			
-            			    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:10: CHARS
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:10: CHARS
             			    {
             			    	dbg.Location(33,10);
             			    	Match(input,CHARS,FOLLOW_CHARS_in_skill222); 
@@ -653,7 +653,7 @@ public class CombatSpamParser : DebugParser
             	} finally { dbg.ExitSubRule(8); }
 
             	dbg.Location(33,17);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:17: ( prep )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:17: ( prep )?
             	int alt9 = 2;
             	try { dbg.EnterSubRule(9);
             	try { dbg.EnterDecision(9);
@@ -676,7 +676,7 @@ public class CombatSpamParser : DebugParser
             	    case 1 :
             	        dbg.EnterAlt(1);
             	    
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:33:17: prep
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:33:17: prep
             	        {
             	        	dbg.Location(33,17);
             	        	PushFollow(FOLLOW_prep_in_skill225);
@@ -718,7 +718,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start damageAmount
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:34:1: damageAmount : ( DIGITS )+ ;
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:34:1: damageAmount : ( DIGITS )+ ;
     public void damageAmount() // throws RecognitionException [1]
     {   
         try 
@@ -730,13 +730,13 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:34:14: ( ( DIGITS )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:34:14: ( ( DIGITS )+ )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:34:16: ( DIGITS )+
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:34:16: ( DIGITS )+
             {
             	dbg.Location(34,16);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:34:16: ( DIGITS )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:34:16: ( DIGITS )+
             	int cnt10 = 0;
             	try { dbg.EnterSubRule(10);
             	
@@ -760,7 +760,7 @@ public class CombatSpamParser : DebugParser
             			case 1 :
             			    dbg.EnterAlt(1);
             			
-            			    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:34:16: DIGITS
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:34:16: DIGITS
             			    {
             			    	dbg.Location(34,16);
             			    	Match(input,DIGITS,FOLLOW_DIGITS_in_damageAmount233); 
@@ -811,7 +811,7 @@ public class CombatSpamParser : DebugParser
 
     
     // $ANTLR start damageType
-    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:35:1: damageType : ( CHARS )+ ;
+    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:35:1: damageType : ( CHARS )+ ;
     public void damageType() // throws RecognitionException [1]
     {   
         try 
@@ -823,13 +823,13 @@ public class CombatSpamParser : DebugParser
     
         try 
     	{
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:35:12: ( ( CHARS )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:35:12: ( ( CHARS )+ )
             dbg.EnterAlt(1);
             
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:35:14: ( CHARS )+
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:35:14: ( CHARS )+
             {
             	dbg.Location(35,14);
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:35:14: ( CHARS )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:35:14: ( CHARS )+
             	int cnt11 = 0;
             	try { dbg.EnterSubRule(11);
             	
@@ -853,7 +853,7 @@ public class CombatSpamParser : DebugParser
             			case 1 :
             			    dbg.EnterAlt(1);
             			
-            			    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:35:14: CHARS
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:35:14: CHARS
             			    {
             			    	dbg.Location(35,14);
             			    	Match(input,CHARS,FOLLOW_CHARS_in_damageType242); 

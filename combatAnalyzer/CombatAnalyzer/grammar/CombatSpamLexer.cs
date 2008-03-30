@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g 2008-03-29 21:35:50
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g 2008-03-30 01:06:29
 
 using System;
 using Antlr.Runtime;
@@ -37,7 +37,7 @@ public class CombatSpamLexer : Lexer
     
     override public string GrammarFileName
     {
-    	get { return "C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g";} 
+    	get { return "C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g";} 
     }
 
     // $ANTLR start DAMAGE 
@@ -46,8 +46,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = DAMAGE;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:7:8: ( 'damage' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:7:10: 'damage'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:7:8: ( 'damage' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:7:10: 'damage'
             {
             	Match("damage"); 
 
@@ -68,8 +68,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = WOUND;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:8:7: ( 'wound' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:8:9: 'wound'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:8:7: ( 'wound' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:8:9: 'wound'
             {
             	Match("wound"); 
 
@@ -90,8 +90,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = WOUNDS;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:9:8: ( 'wounds' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:9:10: 'wounds'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:9:8: ( 'wounds' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:9:10: 'wounds'
             {
             	Match("wounds"); 
 
@@ -112,8 +112,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = ARE_WOUNDED;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:10:13: ( 'are wounded' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:10:15: 'are wounded'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:10:13: ( 'are wounded' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:10:15: 'are wounded'
             {
             	Match("are wounded"); 
 
@@ -134,8 +134,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:11:6: ( 'with' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:11:8: 'with'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:11:6: ( 'with' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:11:8: 'with'
             {
             	Match("with"); 
 
@@ -156,8 +156,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:12:5: ( 'for' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:12:7: 'for'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:12:5: ( 'for' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:12:7: 'for'
             {
             	Match("for"); 
 
@@ -178,8 +178,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = OF;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:13:4: ( 'of' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:13:6: 'of'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:13:4: ( 'of' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:13:6: 'of'
             {
             	Match("of"); 
 
@@ -200,8 +200,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = FROM;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:14:6: ( 'from' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:14:8: 'from'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:14:6: ( 'from' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:14:8: 'from'
             {
             	Match("from"); 
 
@@ -222,8 +222,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = CHARS;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:21:7: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:21:9: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:21:7: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:21:9: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             	if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -254,8 +254,8 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = DIGITS;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:22:8: ( '0' .. '9' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:22:10: '0' .. '9'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:22:8: ( '0' .. '9' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:22:10: '0' .. '9'
             {
             	MatchRange('0','9'); 
             
@@ -275,7 +275,7 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = POINTS;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:23:8: ( 'point' | 'points' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:23:8: ( 'point' | 'points' )
             int alt1 = 2;
             int LA1_0 = input.LA(1);
             
@@ -349,7 +349,7 @@ public class CombatSpamLexer : Lexer
             switch (alt1) 
             {
                 case 1 :
-                    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:23:10: 'point'
+                    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:23:10: 'point'
                     {
                     	Match("point"); 
 
@@ -357,7 +357,7 @@ public class CombatSpamLexer : Lexer
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:23:20: 'points'
+                    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:23:20: 'points'
                     {
                     	Match("points"); 
 
@@ -380,10 +380,10 @@ public class CombatSpamLexer : Lexer
         try 
     	{
             int _type = NEWLINE;
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:24:9: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:24:11: ( '\\r' )? '\\n'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:24:9: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:24:11: ( '\\r' )? '\\n'
             {
-            	// C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:24:11: ( '\\r' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:24:11: ( '\\r' )?
             	int alt2 = 2;
             	int LA2_0 = input.LA(1);
             	
@@ -394,7 +394,7 @@ public class CombatSpamLexer : Lexer
             	switch (alt2) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:24:11: '\\r'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:24:11: '\\r'
             	        {
             	        	Match('\r'); 
             	        
@@ -417,7 +417,7 @@ public class CombatSpamLexer : Lexer
 
     override public void mTokens() // throws RecognitionException 
     {
-        // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:8: ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | CHARS | DIGITS | POINTS | NEWLINE )
+        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:8: ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | CHARS | DIGITS | POINTS | NEWLINE )
         int alt3 = 12;
         switch ( input.LA(1) ) 
         {
@@ -637,84 +637,84 @@ public class CombatSpamLexer : Lexer
         switch (alt3) 
         {
             case 1 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:10: DAMAGE
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:10: DAMAGE
                 {
                 	mDAMAGE(); 
                 
                 }
                 break;
             case 2 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:17: WOUND
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:17: WOUND
                 {
                 	mWOUND(); 
                 
                 }
                 break;
             case 3 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:23: WOUNDS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:23: WOUNDS
                 {
                 	mWOUNDS(); 
                 
                 }
                 break;
             case 4 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:30: ARE_WOUNDED
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:30: ARE_WOUNDED
                 {
                 	mARE_WOUNDED(); 
                 
                 }
                 break;
             case 5 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:42: WITH
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:42: WITH
                 {
                 	mWITH(); 
                 
                 }
                 break;
             case 6 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:47: FOR
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:47: FOR
                 {
                 	mFOR(); 
                 
                 }
                 break;
             case 7 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:51: OF
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:51: OF
                 {
                 	mOF(); 
                 
                 }
                 break;
             case 8 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:54: FROM
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:54: FROM
                 {
                 	mFROM(); 
                 
                 }
                 break;
             case 9 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:59: CHARS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:59: CHARS
                 {
                 	mCHARS(); 
                 
                 }
                 break;
             case 10 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:65: DIGITS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:65: DIGITS
                 {
                 	mDIGITS(); 
                 
                 }
                 break;
             case 11 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:72: POINTS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:72: POINTS
                 {
                 	mPOINTS(); 
                 
                 }
                 break;
             case 12 :
-                // C:\\Users\\Brandon\\Documents\\The Lord of the Rings Online\\CombatSpam.g:1:79: NEWLINE
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatSpam.g:1:79: NEWLINE
                 {
                 	mNEWLINE(); 
                 
