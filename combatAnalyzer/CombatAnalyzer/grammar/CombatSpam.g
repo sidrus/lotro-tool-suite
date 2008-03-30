@@ -24,12 +24,12 @@ POINTS	: 'point' | 'points';
 NEWLINE	: '\r'?'\n';
 
 combatLine
-	: combatant verb (combatant)? (prep skill+)? (prep damageAmount POINTS) (prep damageType (DAMAGE)?)? NEWLINE?
+	: combatant verb (combatant)? (prep skill)? (prep damageAmount POINTS) (prep damageType (DAMAGE)?)? NEWLINE?
 	;
 
 verb		: WOUND | WOUNDS | ARE_WOUNDED;
 prep		: WITH | FOR | OF | FROM;
 combatant	: CHARS+;
-skill		: CHARS+ prep?;
+skill		: CHARS+;
 damageAmount	: DIGITS+;	
 damageType	: CHARS+;
