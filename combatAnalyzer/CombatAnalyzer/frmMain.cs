@@ -7,12 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.IO;
+using Antlr.Runtime;
 
 namespace CombatAnalyzer
 {
     public partial class frmMain : Form
     {
-        private ParsedLog l;
+        //private ParsedLog l;
+        private ANTLRFileStream afs;
 
         public frmMain()
         {
@@ -22,9 +24,14 @@ namespace CombatAnalyzer
             if (!File.Exists(@"grammar\CombatSpam.g"))
             {
                 MessageBox.Show("Cannot locate the grammar file.");
+                Application.Exit();
             }
+
+            afs = new ANTLRFileStream(@"grammar\CombatSpam.g");
+            afs.Consume();
         }
 
+        /*
         private void analyzeTargets()
         {
             Hashtable targetGroups = new Hashtable();
@@ -147,6 +154,7 @@ namespace CombatAnalyzer
                 listView3.Items.Add(i);
             }
         }
+        */
 
         private void listView_ColumnClick(object sender, ColumnClickEventArgs e)
         {
@@ -163,10 +171,11 @@ namespace CombatAnalyzer
             OpenFileDialog dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                l = Parser.ParseLog(dlg.FileName);
-                analyzeTargets();
-                analyzeSkills();
-                analyzeDmgType();
+                afs.Load(dlg.FileName, Encoding.Default);
+                //l = Parser.ParseLog(dlg.FileName);
+                //analyzeTargets();
+                //analyzeSkills();
+                //analyzeDmgType();
             }
         }
     }
