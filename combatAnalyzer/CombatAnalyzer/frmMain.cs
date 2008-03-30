@@ -19,16 +19,6 @@ namespace CombatAnalyzer
         public frmMain()
         {
             InitializeComponent();
-
-            // Check for the grammar
-            if (!File.Exists(@"grammar\CombatSpam.g"))
-            {
-                MessageBox.Show("Cannot locate the grammar file.");
-                Application.Exit();
-            }
-
-            afs = new ANTLRFileStream(@"grammar\CombatSpam.g");
-            afs.Consume();
         }
 
         /*
@@ -171,11 +161,12 @@ namespace CombatAnalyzer
             OpenFileDialog dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                afs.Load(dlg.FileName, Encoding.Default);
-                //l = Parser.ParseLog(dlg.FileName);
-                //analyzeTargets();
-                //analyzeSkills();
-                //analyzeDmgType();
+                afs = new ANTLRFileStream(dlg.FileName);
+                CombatSpamLexer lxr = new CombatSpamLexer(afs);
+                CommonTokenStream ts = new CommonTokenStream(lxr);
+                CombatSpamParser parser = new CombatSpamParser(ts);
+
+                parser.combatLine();
             }
         }
     }
