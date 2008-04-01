@@ -46,12 +46,6 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="grammar\CombatSpamLexer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="grammar\CombatSpamParser.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="ListViewItemComparer.cs" />
     <Compile Include="ParsedLog.cs" />
     <Compile Include="ParsedLogEntry.cs" />
@@ -71,9 +65,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="grammar\CombatSpam.g" />
-    <None Include="grammar\CombatSpam.tokens" />
-    <None Include="grammar\CombatSpam__.g" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
