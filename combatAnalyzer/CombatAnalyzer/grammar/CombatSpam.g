@@ -1,9 +1,6 @@
 grammar CombatSpam;
 
-options
-{
-    language=CSharp;
-}
+
 
 tokens {
 	DAMAGE='damage';

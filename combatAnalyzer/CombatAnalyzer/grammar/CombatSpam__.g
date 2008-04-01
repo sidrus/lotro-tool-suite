@@ -1,8 +1,4 @@
 lexer grammar CombatSpam;
-options {
-  language=CSharp;
-
-}
 
 DAMAGE : 'damage' ;
 WOUND : 'wound' ;
@@ -13,12 +9,12 @@ FOR : 'for' ;
 OF : 'of' ;
 FROM : 'from' ;
 
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 21
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 18
 CHARS	: ('a'..'z'|'A'..'Z');
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 22
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 19
 DIGITS	: '0'..'9';		
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 23
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 20
 POINTS	: 'point' | 'points';
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 24
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatSpam.g" 21
 NEWLINE	: '\r'?'\n';
 
