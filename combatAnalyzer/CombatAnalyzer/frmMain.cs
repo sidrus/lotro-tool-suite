@@ -14,7 +14,7 @@ namespace CombatAnalyzer
     public partial class frmMain : Form
     {
         //private ParsedLog l;
-        private ANTLRFileStream afs;
+        private ICharStream afs;
 
         public frmMain()
         {
@@ -165,6 +165,7 @@ namespace CombatAnalyzer
                 CombatSpamLexer lxr = new CombatSpamLexer(afs);
                 CommonTokenStream ts = new CommonTokenStream(lxr);
                 CombatSpamParser parser = new CombatSpamParser(ts);
+                
 
                 parser.combatLine();
             }
