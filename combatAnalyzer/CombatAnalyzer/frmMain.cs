@@ -161,13 +161,19 @@ namespace CombatAnalyzer
             OpenFileDialog dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                afs = new ANTLRFileStream(dlg.FileName);
-                CombatSpamLexer lxr = new CombatSpamLexer(afs);
-                CommonTokenStream ts = new CommonTokenStream(lxr);
-                CombatSpamParser parser = new CombatSpamParser(ts);
-                
+                try
+                {
+                    afs = new ANTLRFileStream(dlg.FileName);
+                    CombatAnalyzerLexer lxr = new CombatAnalyzerLexer(afs);
+                    CommonTokenStream ts = new CommonTokenStream(lxr);
+                    CombatAnalyzerParser parser = new CombatAnalyzerParser(ts);
 
-                parser.combatLine();
+                    parser.combatLine();
+                }
+                catch (NoViableAltException nve)
+                {
+                    MessageBox.Show(nve.Message + "\n" + nve.grammarDecisionDescription);
+                }
             }
         }
     }
