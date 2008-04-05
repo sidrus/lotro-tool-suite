@@ -170,9 +170,13 @@ namespace CombatAnalyzer
 
                     parser.chatLine();
                 }
-                catch (NoViableAltException nve)
+                catch (Antlr.Runtime.NoViableAltException nve)
                 {
                     MessageBox.Show(nve.Message + "\n" + nve.grammarDecisionDescription);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

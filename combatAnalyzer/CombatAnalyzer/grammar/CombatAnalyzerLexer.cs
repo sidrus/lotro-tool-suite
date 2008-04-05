@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 00:01:35
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 00:10:49
 
 using System;
 using Antlr.Runtime;
@@ -10,22 +10,24 @@ using Stack 		= Antlr.Runtime.Collections.StackList;
 
 public class CombatAnalyzerLexer : Lexer 
 {
-    public const int NEWLINE = 15;
+    public const int CL_REFLECT_LINE = 19;
+    public const int REFLECT = 7;
     public const int HEAL = 6;
-    public const int POINTS = 12;
     public const int WOUND = 5;
+    public const int POINTS = 13;
     public const int DAMAGE = 4;
-    public const int DIGITS = 14;
-    public const int CHAR = 13;
-    public const int CS_LOG_MSG_SYS = 17;
-    public const int FOR = 8;
-    public const int CS_COMMENT = 16;
-    public const int FROM = 10;
-    public const int LOGGING = 11;
-    public const int Tokens = 18;
-    public const int OF = 9;
+    public const int DIGITS = 15;
+    public const int CHAR = 14;
+    public const int FOR = 9;
+    public const int LOGGING = 12;
+    public const int CL_COMMENT = 17;
+    public const int Tokens = 20;
     public const int EOF = -1;
-    public const int WITH = 7;
+    public const int OF = 10;
+    public const int NEWLINE = 16;
+    public const int CL_SYS_MSG = 18;
+    public const int FROM = 11;
+    public const int WITH = 8;
 
     public CombatAnalyzerLexer() 
     {
@@ -238,14 +240,56 @@ public class CombatAnalyzerLexer : Lexer
     }
     // $ANTLR end HEAL
 
+    // $ANTLR start REFLECT 
+    public void mREFLECT() // throws RecognitionException [2]
+    {
+        try 
+    	{
+            int _type = REFLECT;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:9: ( 'reflect' ( 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:11: 'reflect' ( 's' )?
+            {
+            	Match("reflect"); 
+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:21: ( 's' )?
+            	int alt5 = 2;
+            	int LA5_0 = input.LA(1);
+            	
+            	if ( (LA5_0 == 's') )
+            	{
+            	    alt5 = 1;
+            	}
+            	switch (alt5) 
+            	{
+            	    case 1 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:21: 's'
+            	        {
+            	        	Match('s'); 
+            	        
+            	        }
+            	        break;
+            	
+            	}
+
+            
+            }
+    
+            this.type = _type;
+        }
+        finally 
+    	{
+        }
+    }
+    // $ANTLR end REFLECT
+
     // $ANTLR start WITH 
     public void mWITH() // throws RecognitionException [2]
     {
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:6: ( 'with' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:8: 'with'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:6: ( 'with' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:8: 'with'
             {
             	Match("with"); 
 
@@ -266,8 +310,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:5: ( 'for' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:7: 'for'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:5: ( 'for' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:7: 'for'
             {
             	Match("for"); 
 
@@ -288,8 +332,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = OF;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:4: ( 'of' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:6: 'of'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:4: ( 'of' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:6: 'of'
             {
             	Match("of"); 
 
@@ -310,8 +354,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FROM;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:6: ( 'from' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:8: 'from'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:6: ( 'from' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:8: 'from'
             {
             	Match("from"); 
 
@@ -332,8 +376,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = LOGGING;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:9: ( 'Logging chat tab' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:11: 'Logging chat tab'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:9: ( 'Logging chat tab' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:11: 'Logging chat tab'
             {
             	Match("Logging chat tab"); 
 
@@ -354,26 +398,26 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = POINTS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:8: ( ( 'point' ( 's' )? ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:10: ( 'point' ( 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:8: ( ( 'point' ( 's' )? ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:10: ( 'point' ( 's' )? )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:10: ( 'point' ( 's' )? )
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:11: 'point' ( 's' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:10: ( 'point' ( 's' )? )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:11: 'point' ( 's' )?
             	{
             		Match("point"); 
 
-            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:19: ( 's' )?
-            		int alt5 = 2;
-            		int LA5_0 = input.LA(1);
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:19: ( 's' )?
+            		int alt6 = 2;
+            		int LA6_0 = input.LA(1);
             		
-            		if ( (LA5_0 == 's') )
+            		if ( (LA6_0 == 's') )
             		{
-            		    alt5 = 1;
+            		    alt6 = 1;
             		}
-            		switch (alt5) 
+            		switch (alt6) 
             		{
             		    case 1 :
-            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:19: 's'
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:19: 's'
             		        {
             		        	Match('s'); 
             		        
@@ -402,8 +446,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CHAR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:8: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:8: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             	if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -434,26 +478,26 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = DIGITS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:8: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( '0' .. '9' )+
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:8: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:10: ( '0' .. '9' )+
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( '0' .. '9' )+
-            	int cnt6 = 0;
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:10: ( '0' .. '9' )+
+            	int cnt7 = 0;
             	do 
             	{
-            	    int alt6 = 2;
-            	    int LA6_0 = input.LA(1);
+            	    int alt7 = 2;
+            	    int LA7_0 = input.LA(1);
             	    
-            	    if ( ((LA6_0 >= '0' && LA6_0 <= '9')) )
+            	    if ( ((LA7_0 >= '0' && LA7_0 <= '9')) )
             	    {
-            	        alt6 = 1;
+            	        alt7 = 1;
             	    }
             	    
             	
-            	    switch (alt6) 
+            	    switch (alt7) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:11: '0' .. '9'
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:11: '0' .. '9'
             			    {
             			    	MatchRange('0','9'); 
             			    
@@ -461,16 +505,16 @@ public class CombatAnalyzerLexer : Lexer
             			    break;
             	
             			default:
-            			    if ( cnt6 >= 1 ) goto loop6;
+            			    if ( cnt7 >= 1 ) goto loop7;
             		            EarlyExitException eee =
-            		                new EarlyExitException(6, input);
+            		                new EarlyExitException(7, input);
             		            throw eee;
             	    }
-            	    cnt6++;
+            	    cnt7++;
             	} while (true);
             	
-            	loop6:
-            		;	// Stops C# compiler whinging that label 'loop6' has no statements
+            	loop7:
+            		;	// Stops C# compiler whinging that label 'loop7' has no statements
 
             
             }
@@ -489,24 +533,24 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = NEWLINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:9: ( ( ( '\\r' )? '\\n' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:11: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:9: ( ( ( '\\r' )? '\\n' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:11: ( ( '\\r' )? '\\n' )
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: ( '\\r' )? '\\n'
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )? '\\n'
             	{
-            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: ( '\\r' )?
-            		int alt7 = 2;
-            		int LA7_0 = input.LA(1);
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )?
+            		int alt8 = 2;
+            		int LA8_0 = input.LA(1);
             		
-            		if ( (LA7_0 == '\r') )
+            		if ( (LA8_0 == '\r') )
             		{
-            		    alt7 = 1;
+            		    alt8 = 1;
             		}
-            		switch (alt7) 
+            		switch (alt8) 
             		{
             		    case 1 :
-            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: '\\r'
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: '\\r'
             		        {
             		        	Match('\r'); 
             		        
@@ -530,112 +574,50 @@ public class CombatAnalyzerLexer : Lexer
     }
     // $ANTLR end NEWLINE
 
-    // $ANTLR start CS_COMMENT 
-    public void mCS_COMMENT() // throws RecognitionException [2]
+    // $ANTLR start CL_COMMENT 
+    public void mCL_COMMENT() // throws RecognitionException [2]
     {
         try 
     	{
-            int _type = CS_COMMENT;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:12: ( '###' ( options {greedy=false; } : . )* '###' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:14: '###' ( options {greedy=false; } : . )* '###'
+            int _type = CL_COMMENT;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:12: ( '###' ( options {greedy=false; } : . )* '###' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:14: '###' ( options {greedy=false; } : . )* '###'
             {
             	Match("###"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:20: ( options {greedy=false; } : . )*
-            	do 
-            	{
-            	    int alt8 = 2;
-            	    int LA8_0 = input.LA(1);
-            	    
-            	    if ( (LA8_0 == '#') )
-            	    {
-            	        int LA8_1 = input.LA(2);
-            	        
-            	        if ( (LA8_1 == '#') )
-            	        {
-            	            int LA8_3 = input.LA(3);
-            	            
-            	            if ( (LA8_3 == '#') )
-            	            {
-            	                alt8 = 2;
-            	            }
-            	            else if ( ((LA8_3 >= '\u0000' && LA8_3 <= '\"') || (LA8_3 >= '$' && LA8_3 <= '\uFFFE')) )
-            	            {
-            	                alt8 = 1;
-            	            }
-            	            
-            	        
-            	        }
-            	        else if ( ((LA8_1 >= '\u0000' && LA8_1 <= '\"') || (LA8_1 >= '$' && LA8_1 <= '\uFFFE')) )
-            	        {
-            	            alt8 = 1;
-            	        }
-            	        
-            	    
-            	    }
-            	    else if ( ((LA8_0 >= '\u0000' && LA8_0 <= '\"') || (LA8_0 >= '$' && LA8_0 <= '\uFFFE')) )
-            	    {
-            	        alt8 = 1;
-            	    }
-            	    
-            	
-            	    switch (alt8) 
-            		{
-            			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:47: .
-            			    {
-            			    	MatchAny(); 
-            			    
-            			    }
-            			    break;
-            	
-            			default:
-            			    goto loop8;
-            	    }
-            	} while (true);
-            	
-            	loop8:
-            		;	// Stops C# compiler whinging that label 'loop8' has no statements
-
-            	Match("###"); 
-
-            	channel=HIDDEN;
-            
-            }
-    
-            this.type = _type;
-        }
-        finally 
-    	{
-        }
-    }
-    // $ANTLR end CS_COMMENT
-
-    // $ANTLR start CS_LOG_MSG_SYS 
-    public void mCS_LOG_MSG_SYS() // throws RecognitionException [2]
-    {
-        try 
-    	{
-            int _type = CS_LOG_MSG_SYS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:16: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:18: LOGGING ( options {greedy=false; } : . )* NEWLINE
-            {
-            	mLOGGING(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:26: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:20: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt9 = 2;
             	    int LA9_0 = input.LA(1);
             	    
-            	    if ( (LA9_0 == '\r') )
+            	    if ( (LA9_0 == '#') )
             	    {
-            	        alt9 = 2;
+            	        int LA9_1 = input.LA(2);
+            	        
+            	        if ( (LA9_1 == '#') )
+            	        {
+            	            int LA9_3 = input.LA(3);
+            	            
+            	            if ( (LA9_3 == '#') )
+            	            {
+            	                alt9 = 2;
+            	            }
+            	            else if ( ((LA9_3 >= '\u0000' && LA9_3 <= '\"') || (LA9_3 >= '$' && LA9_3 <= '\uFFFE')) )
+            	            {
+            	                alt9 = 1;
+            	            }
+            	            
+            	        
+            	        }
+            	        else if ( ((LA9_1 >= '\u0000' && LA9_1 <= '\"') || (LA9_1 >= '$' && LA9_1 <= '\uFFFE')) )
+            	        {
+            	            alt9 = 1;
+            	        }
+            	        
+            	    
             	    }
-            	    else if ( (LA9_0 == '\n') )
-            	    {
-            	        alt9 = 2;
-            	    }
-            	    else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\t') || (LA9_0 >= '\u000B' && LA9_0 <= '\f') || (LA9_0 >= '\u000E' && LA9_0 <= '\uFFFE')) )
+            	    else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\"') || (LA9_0 >= '$' && LA9_0 <= '\uFFFE')) )
             	    {
             	        alt9 = 1;
             	    }
@@ -644,7 +626,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt9) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:53: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:47: .
             			    {
             			    	MatchAny(); 
             			    
@@ -659,6 +641,68 @@ public class CombatAnalyzerLexer : Lexer
             	loop9:
             		;	// Stops C# compiler whinging that label 'loop9' has no statements
 
+            	Match("###"); 
+
+            	channel=HIDDEN;
+            
+            }
+    
+            this.type = _type;
+        }
+        finally 
+    	{
+        }
+    }
+    // $ANTLR end CL_COMMENT
+
+    // $ANTLR start CL_SYS_MSG 
+    public void mCL_SYS_MSG() // throws RecognitionException [2]
+    {
+        try 
+    	{
+            int _type = CL_SYS_MSG;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:12: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:14: LOGGING ( options {greedy=false; } : . )* NEWLINE
+            {
+            	mLOGGING(); 
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:22: ( options {greedy=false; } : . )*
+            	do 
+            	{
+            	    int alt10 = 2;
+            	    int LA10_0 = input.LA(1);
+            	    
+            	    if ( (LA10_0 == '\r') )
+            	    {
+            	        alt10 = 2;
+            	    }
+            	    else if ( (LA10_0 == '\n') )
+            	    {
+            	        alt10 = 2;
+            	    }
+            	    else if ( ((LA10_0 >= '\u0000' && LA10_0 <= '\t') || (LA10_0 >= '\u000B' && LA10_0 <= '\f') || (LA10_0 >= '\u000E' && LA10_0 <= '\uFFFE')) )
+            	    {
+            	        alt10 = 1;
+            	    }
+            	    
+            	
+            	    switch (alt10) 
+            		{
+            			case 1 :
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:49: .
+            			    {
+            			    	MatchAny(); 
+            			    
+            			    }
+            			    break;
+            	
+            			default:
+            			    goto loop10;
+            	    }
+            	} while (true);
+            	
+            	loop10:
+            		;	// Stops C# compiler whinging that label 'loop10' has no statements
+
             	mNEWLINE(); 
             	channel=HIDDEN;
             
@@ -670,387 +714,1869 @@ public class CombatAnalyzerLexer : Lexer
     	{
         }
     }
-    // $ANTLR end CS_LOG_MSG_SYS
+    // $ANTLR end CL_SYS_MSG
+
+    // $ANTLR start CL_REFLECT_LINE 
+    public void mCL_REFLECT_LINE() // throws RecognitionException [2]
+    {
+        try 
+    	{
+            int _type = CL_REFLECT_LINE;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:17: ( ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE
+            {
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: ( CHAR )+
+            	int cnt11 = 0;
+            	do 
+            	{
+            	    int alt11 = 2;
+            	    int LA11_0 = input.LA(1);
+            	    
+            	    if ( ((LA11_0 >= 'A' && LA11_0 <= 'Z') || (LA11_0 >= 'a' && LA11_0 <= 'z')) )
+            	    {
+            	        alt11 = 1;
+            	    }
+            	    
+            	
+            	    switch (alt11) 
+            		{
+            			case 1 :
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: CHAR
+            			    {
+            			    	mCHAR(); 
+            			    
+            			    }
+            			    break;
+            	
+            			default:
+            			    if ( cnt11 >= 1 ) goto loop11;
+            		            EarlyExitException eee =
+            		                new EarlyExitException(11, input);
+            		            throw eee;
+            	    }
+            	    cnt11++;
+            	} while (true);
+            	
+            	loop11:
+            		;	// Stops C# compiler whinging that label 'loop11' has no statements
+
+            	Match(' '); 
+            	mREFLECT(); 
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:37: ( options {greedy=false; } : . )*
+            	do 
+            	{
+            	    int alt12 = 2;
+            	    int LA12_0 = input.LA(1);
+            	    
+            	    if ( (LA12_0 == '\r') )
+            	    {
+            	        alt12 = 2;
+            	    }
+            	    else if ( (LA12_0 == '\n') )
+            	    {
+            	        alt12 = 2;
+            	    }
+            	    else if ( ((LA12_0 >= '\u0000' && LA12_0 <= '\t') || (LA12_0 >= '\u000B' && LA12_0 <= '\f') || (LA12_0 >= '\u000E' && LA12_0 <= '\uFFFE')) )
+            	    {
+            	        alt12 = 1;
+            	    }
+            	    
+            	
+            	    switch (alt12) 
+            		{
+            			case 1 :
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:64: .
+            			    {
+            			    	MatchAny(); 
+            			    
+            			    }
+            			    break;
+            	
+            			default:
+            			    goto loop12;
+            	    }
+            	} while (true);
+            	
+            	loop12:
+            		;	// Stops C# compiler whinging that label 'loop12' has no statements
+
+            	mNEWLINE(); 
+            	channel=HIDDEN;
+            
+            }
+    
+            this.type = _type;
+        }
+        finally 
+    	{
+        }
+    }
+    // $ANTLR end CL_REFLECT_LINE
 
     override public void mTokens() // throws RecognitionException 
     {
-        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:8: ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS )
-        int alt10 = 14;
+        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:8: ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE )
+        int alt13 = 16;
         switch ( input.LA(1) ) 
         {
         case 'd':
         	{
-            int LA10_1 = input.LA(2);
-            
-            if ( (LA10_1 == 'a') )
+            switch ( input.LA(2) ) 
             {
-                alt10 = 1;
-            }
-            else 
-            {
-                alt10 = 10;}
+            case 'a':
+            	{
+                int LA13_15 = input.LA(3);
+                
+                if ( (LA13_15 == 'm') )
+                {
+                    int LA13_29 = input.LA(4);
+                    
+                    if ( (LA13_29 == 'a') )
+                    {
+                        int LA13_41 = input.LA(5);
+                        
+                        if ( (LA13_41 == 'g') )
+                        {
+                            int LA13_53 = input.LA(6);
+                            
+                            if ( (LA13_53 == 'e') )
+                            {
+                                int LA13_62 = input.LA(7);
+                                
+                                if ( (LA13_62 == ' ' || (LA13_62 >= 'A' && LA13_62 <= 'Z') || (LA13_62 >= 'a' && LA13_62 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    alt13 = 1;}
+                            }
+                            else if ( (LA13_53 == ' ' || (LA13_53 >= 'A' && LA13_53 <= 'Z') || (LA13_53 >= 'a' && LA13_53 <= 'd') || (LA13_53 >= 'f' && LA13_53 <= 'z')) )
+                            {
+                                alt13 = 16;
+                            }
+                            else 
+                            {
+                                NoViableAltException nvae_d13s53 =
+                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 53, input);
+                            
+                                throw nvae_d13s53;
+                            }
+                        }
+                        else if ( (LA13_41 == ' ' || (LA13_41 >= 'A' && LA13_41 <= 'Z') || (LA13_41 >= 'a' && LA13_41 <= 'f') || (LA13_41 >= 'h' && LA13_41 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            NoViableAltException nvae_d13s41 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 41, input);
+                        
+                            throw nvae_d13s41;
+                        }
+                    }
+                    else if ( (LA13_29 == ' ' || (LA13_29 >= 'A' && LA13_29 <= 'Z') || (LA13_29 >= 'b' && LA13_29 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s29 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 29, input);
+                    
+                        throw nvae_d13s29;
+                    }
+                }
+                else if ( (LA13_15 == ' ' || (LA13_15 >= 'A' && LA13_15 <= 'Z') || (LA13_15 >= 'a' && LA13_15 <= 'l') || (LA13_15 >= 'n' && LA13_15 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s15 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 15, input);
+                
+                    throw nvae_d13s15;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'a':
         	{
-            int LA10_2 = input.LA(2);
-            
-            if ( (LA10_2 == 'r') )
+            switch ( input.LA(2) ) 
             {
-                int LA10_15 = input.LA(3);
+            case 'r':
+            	{
+                int LA13_18 = input.LA(3);
                 
-                if ( (LA10_15 == 'e') )
+                if ( (LA13_18 == 'e') )
                 {
-                    int LA10_25 = input.LA(4);
+                    int LA13_30 = input.LA(4);
                     
-                    if ( (LA10_25 == ' ') )
+                    if ( (LA13_30 == ' ') )
                     {
-                        int LA10_28 = input.LA(5);
+                        switch ( input.LA(5) ) 
+                        {
+                        case 'h':
+                        	{
+                            alt13 = 3;
+                            }
+                            break;
+                        case 'r':
+                        	{
+                            alt13 = 16;
+                            }
+                            break;
+                        case 'w':
+                        	{
+                            alt13 = 2;
+                            }
+                            break;
+                        	default:
+                        	    NoViableAltException nvae_d13s42 =
+                        	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 42, input);
                         
-                        if ( (LA10_28 == 'w') )
-                        {
-                            alt10 = 2;
+                        	    throw nvae_d13s42;
                         }
-                        else if ( (LA10_28 == 'h') )
-                        {
-                            alt10 = 3;
-                        }
-                        else 
-                        {
-                            NoViableAltException nvae_d10s28 =
-                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 28, input);
-                        
-                            throw nvae_d10s28;
-                        }
+                    
+                    }
+                    else if ( ((LA13_30 >= 'A' && LA13_30 <= 'Z') || (LA13_30 >= 'a' && LA13_30 <= 'z')) )
+                    {
+                        alt13 = 16;
                     }
                     else 
                     {
-                        NoViableAltException nvae_d10s25 =
-                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 25, input);
+                        NoViableAltException nvae_d13s30 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 30, input);
                     
-                        throw nvae_d10s25;
+                        throw nvae_d13s30;
                     }
+                }
+                else if ( (LA13_18 == ' ' || (LA13_18 >= 'A' && LA13_18 <= 'Z') || (LA13_18 >= 'a' && LA13_18 <= 'd') || (LA13_18 >= 'f' && LA13_18 <= 'z')) )
+                {
+                    alt13 = 16;
                 }
                 else 
                 {
-                    NoViableAltException nvae_d10s15 =
-                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 15, input);
+                    NoViableAltException nvae_d13s18 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 18, input);
                 
-                    throw nvae_d10s15;
+                    throw nvae_d13s18;
                 }
-            }
-            else 
-            {
-                alt10 = 10;}
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'i':
         	{
-            int LA10_3 = input.LA(2);
-            
-            if ( (LA10_3 == 's') )
+            switch ( input.LA(2) ) 
             {
-                int LA10_16 = input.LA(3);
+            case 's':
+            	{
+                int LA13_19 = input.LA(3);
                 
-                if ( (LA10_16 == ' ') )
+                if ( (LA13_19 == ' ') )
                 {
-                    int LA10_26 = input.LA(4);
+                    switch ( input.LA(4) ) 
+                    {
+                    case 'r':
+                    	{
+                        alt13 = 16;
+                        }
+                        break;
+                    case 'h':
+                    	{
+                        alt13 = 3;
+                        }
+                        break;
+                    case 'w':
+                    	{
+                        alt13 = 2;
+                        }
+                        break;
+                    	default:
+                    	    NoViableAltException nvae_d13s31 =
+                    	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 31, input);
                     
-                    if ( (LA10_26 == 'h') )
-                    {
-                        alt10 = 3;
+                    	    throw nvae_d13s31;
                     }
-                    else if ( (LA10_26 == 'w') )
-                    {
-                        alt10 = 2;
-                    }
-                    else 
-                    {
-                        NoViableAltException nvae_d10s26 =
-                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 26, input);
-                    
-                        throw nvae_d10s26;
-                    }
+                
+                }
+                else if ( ((LA13_19 >= 'A' && LA13_19 <= 'Z') || (LA13_19 >= 'a' && LA13_19 <= 'z')) )
+                {
+                    alt13 = 16;
                 }
                 else 
                 {
-                    NoViableAltException nvae_d10s16 =
-                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 16, input);
+                    NoViableAltException nvae_d13s19 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 19, input);
                 
-                    throw nvae_d10s16;
+                    throw nvae_d13s19;
                 }
-            }
-            else 
-            {
-                alt10 = 10;}
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'w':
         	{
             switch ( input.LA(2) ) 
             {
-            case 'i':
-            	{
-                alt10 = 4;
-                }
-                break;
             case 'o':
             	{
-                alt10 = 2;
+                int LA13_20 = input.LA(3);
+                
+                if ( (LA13_20 == 'u') )
+                {
+                    int LA13_32 = input.LA(4);
+                    
+                    if ( (LA13_32 == 'n') )
+                    {
+                        int LA13_45 = input.LA(5);
+                        
+                        if ( (LA13_45 == 'd') )
+                        {
+                            switch ( input.LA(6) ) 
+                            {
+                            case 'e':
+                            	{
+                                int LA13_63 = input.LA(7);
+                                
+                                if ( (LA13_63 == 'd') )
+                                {
+                                    int LA13_71 = input.LA(8);
+                                    
+                                    if ( (LA13_71 == ' ' || (LA13_71 >= 'A' && LA13_71 <= 'Z') || (LA13_71 >= 'a' && LA13_71 <= 'z')) )
+                                    {
+                                        alt13 = 16;
+                                    }
+                                    else 
+                                    {
+                                        alt13 = 2;}
+                                }
+                                else if ( (LA13_63 == ' ' || (LA13_63 >= 'A' && LA13_63 <= 'Z') || (LA13_63 >= 'a' && LA13_63 <= 'c') || (LA13_63 >= 'e' && LA13_63 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    NoViableAltException nvae_d13s63 =
+                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 63, input);
+                                
+                                    throw nvae_d13s63;
+                                }
+                                }
+                                break;
+                            case 's':
+                            	{
+                                int LA13_64 = input.LA(7);
+                                
+                                if ( (LA13_64 == ' ' || (LA13_64 >= 'A' && LA13_64 <= 'Z') || (LA13_64 >= 'a' && LA13_64 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    alt13 = 2;}
+                                }
+                                break;
+                            case ' ':
+                            case 'A':
+                            case 'B':
+                            case 'C':
+                            case 'D':
+                            case 'E':
+                            case 'F':
+                            case 'G':
+                            case 'H':
+                            case 'I':
+                            case 'J':
+                            case 'K':
+                            case 'L':
+                            case 'M':
+                            case 'N':
+                            case 'O':
+                            case 'P':
+                            case 'Q':
+                            case 'R':
+                            case 'S':
+                            case 'T':
+                            case 'U':
+                            case 'V':
+                            case 'W':
+                            case 'X':
+                            case 'Y':
+                            case 'Z':
+                            case 'a':
+                            case 'b':
+                            case 'c':
+                            case 'd':
+                            case 'f':
+                            case 'g':
+                            case 'h':
+                            case 'i':
+                            case 'j':
+                            case 'k':
+                            case 'l':
+                            case 'm':
+                            case 'n':
+                            case 'o':
+                            case 'p':
+                            case 'q':
+                            case 'r':
+                            case 't':
+                            case 'u':
+                            case 'v':
+                            case 'w':
+                            case 'x':
+                            case 'y':
+                            case 'z':
+                            	{
+                                alt13 = 16;
+                                }
+                                break;
+                            	default:
+                                	alt13 = 2;
+                                	break;}
+                        
+                        }
+                        else if ( (LA13_45 == ' ' || (LA13_45 >= 'A' && LA13_45 <= 'Z') || (LA13_45 >= 'a' && LA13_45 <= 'c') || (LA13_45 >= 'e' && LA13_45 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            NoViableAltException nvae_d13s45 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 45, input);
+                        
+                            throw nvae_d13s45;
+                        }
+                    }
+                    else if ( (LA13_32 == ' ' || (LA13_32 >= 'A' && LA13_32 <= 'Z') || (LA13_32 >= 'a' && LA13_32 <= 'm') || (LA13_32 >= 'o' && LA13_32 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s32 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 32, input);
+                    
+                        throw nvae_d13s32;
+                    }
+                }
+                else if ( (LA13_20 == ' ' || (LA13_20 >= 'A' && LA13_20 <= 'Z') || (LA13_20 >= 'a' && LA13_20 <= 't') || (LA13_20 >= 'v' && LA13_20 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s20 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 20, input);
+                
+                    throw nvae_d13s20;
+                }
+                }
+                break;
+            case 'i':
+            	{
+                int LA13_21 = input.LA(3);
+                
+                if ( (LA13_21 == 't') )
+                {
+                    int LA13_33 = input.LA(4);
+                    
+                    if ( (LA13_33 == 'h') )
+                    {
+                        int LA13_46 = input.LA(5);
+                        
+                        if ( (LA13_46 == ' ' || (LA13_46 >= 'A' && LA13_46 <= 'Z') || (LA13_46 >= 'a' && LA13_46 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            alt13 = 5;}
+                    }
+                    else if ( (LA13_33 == ' ' || (LA13_33 >= 'A' && LA13_33 <= 'Z') || (LA13_33 >= 'a' && LA13_33 <= 'g') || (LA13_33 >= 'i' && LA13_33 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s33 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 33, input);
+                    
+                        throw nvae_d13s33;
+                    }
+                }
+                else if ( (LA13_21 == ' ' || (LA13_21 >= 'A' && LA13_21 <= 'Z') || (LA13_21 >= 'a' && LA13_21 <= 's') || (LA13_21 >= 'u' && LA13_21 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s21 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 21, input);
+                
+                    throw nvae_d13s21;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
                 }
                 break;
             	default:
-                	alt10 = 10;
+                	alt13 = 11;
                 	break;}
         
             }
             break;
         case 'h':
         	{
-            int LA10_5 = input.LA(2);
-            
-            if ( (LA10_5 == 'e') )
+            switch ( input.LA(2) ) 
             {
-                alt10 = 3;
+            case 'e':
+            	{
+                int LA13_22 = input.LA(3);
+                
+                if ( (LA13_22 == 'a') )
+                {
+                    int LA13_34 = input.LA(4);
+                    
+                    if ( (LA13_34 == 'l') )
+                    {
+                        switch ( input.LA(5) ) 
+                        {
+                        case 'e':
+                        	{
+                            int LA13_56 = input.LA(6);
+                            
+                            if ( (LA13_56 == 'd') )
+                            {
+                                int LA13_65 = input.LA(7);
+                                
+                                if ( (LA13_65 == ' ' || (LA13_65 >= 'A' && LA13_65 <= 'Z') || (LA13_65 >= 'a' && LA13_65 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    alt13 = 3;}
+                            }
+                            else if ( (LA13_56 == ' ' || (LA13_56 >= 'A' && LA13_56 <= 'Z') || (LA13_56 >= 'a' && LA13_56 <= 'c') || (LA13_56 >= 'e' && LA13_56 <= 'z')) )
+                            {
+                                alt13 = 16;
+                            }
+                            else 
+                            {
+                                NoViableAltException nvae_d13s56 =
+                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 56, input);
+                            
+                                throw nvae_d13s56;
+                            }
+                            }
+                            break;
+                        case 's':
+                        	{
+                            int LA13_57 = input.LA(6);
+                            
+                            if ( (LA13_57 == ' ' || (LA13_57 >= 'A' && LA13_57 <= 'Z') || (LA13_57 >= 'a' && LA13_57 <= 'z')) )
+                            {
+                                alt13 = 16;
+                            }
+                            else 
+                            {
+                                alt13 = 3;}
+                            }
+                            break;
+                        case ' ':
+                        case 'A':
+                        case 'B':
+                        case 'C':
+                        case 'D':
+                        case 'E':
+                        case 'F':
+                        case 'G':
+                        case 'H':
+                        case 'I':
+                        case 'J':
+                        case 'K':
+                        case 'L':
+                        case 'M':
+                        case 'N':
+                        case 'O':
+                        case 'P':
+                        case 'Q':
+                        case 'R':
+                        case 'S':
+                        case 'T':
+                        case 'U':
+                        case 'V':
+                        case 'W':
+                        case 'X':
+                        case 'Y':
+                        case 'Z':
+                        case 'a':
+                        case 'b':
+                        case 'c':
+                        case 'd':
+                        case 'f':
+                        case 'g':
+                        case 'h':
+                        case 'i':
+                        case 'j':
+                        case 'k':
+                        case 'l':
+                        case 'm':
+                        case 'n':
+                        case 'o':
+                        case 'p':
+                        case 'q':
+                        case 'r':
+                        case 't':
+                        case 'u':
+                        case 'v':
+                        case 'w':
+                        case 'x':
+                        case 'y':
+                        case 'z':
+                        	{
+                            alt13 = 16;
+                            }
+                            break;
+                        	default:
+                            	alt13 = 3;
+                            	break;}
+                    
+                    }
+                    else if ( (LA13_34 == ' ' || (LA13_34 >= 'A' && LA13_34 <= 'Z') || (LA13_34 >= 'a' && LA13_34 <= 'k') || (LA13_34 >= 'm' && LA13_34 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s34 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 34, input);
+                    
+                        throw nvae_d13s34;
+                    }
+                }
+                else if ( (LA13_22 == ' ' || (LA13_22 >= 'A' && LA13_22 <= 'Z') || (LA13_22 >= 'b' && LA13_22 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s22 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 22, input);
+                
+                    throw nvae_d13s22;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
-            else 
+            break;
+        case 'r':
+        	{
+            switch ( input.LA(2) ) 
             {
-                alt10 = 10;}
+            case 'e':
+            	{
+                int LA13_23 = input.LA(3);
+                
+                if ( (LA13_23 == 'f') )
+                {
+                    int LA13_35 = input.LA(4);
+                    
+                    if ( (LA13_35 == 'l') )
+                    {
+                        int LA13_48 = input.LA(5);
+                        
+                        if ( (LA13_48 == 'e') )
+                        {
+                            int LA13_58 = input.LA(6);
+                            
+                            if ( (LA13_58 == 'c') )
+                            {
+                                int LA13_66 = input.LA(7);
+                                
+                                if ( (LA13_66 == 't') )
+                                {
+                                    switch ( input.LA(8) ) 
+                                    {
+                                    case 's':
+                                    	{
+                                        int LA13_74 = input.LA(9);
+                                        
+                                        if ( (LA13_74 == ' ' || (LA13_74 >= 'A' && LA13_74 <= 'Z') || (LA13_74 >= 'a' && LA13_74 <= 'z')) )
+                                        {
+                                            alt13 = 16;
+                                        }
+                                        else 
+                                        {
+                                            alt13 = 4;}
+                                        }
+                                        break;
+                                    case ' ':
+                                    case 'A':
+                                    case 'B':
+                                    case 'C':
+                                    case 'D':
+                                    case 'E':
+                                    case 'F':
+                                    case 'G':
+                                    case 'H':
+                                    case 'I':
+                                    case 'J':
+                                    case 'K':
+                                    case 'L':
+                                    case 'M':
+                                    case 'N':
+                                    case 'O':
+                                    case 'P':
+                                    case 'Q':
+                                    case 'R':
+                                    case 'S':
+                                    case 'T':
+                                    case 'U':
+                                    case 'V':
+                                    case 'W':
+                                    case 'X':
+                                    case 'Y':
+                                    case 'Z':
+                                    case 'a':
+                                    case 'b':
+                                    case 'c':
+                                    case 'd':
+                                    case 'e':
+                                    case 'f':
+                                    case 'g':
+                                    case 'h':
+                                    case 'i':
+                                    case 'j':
+                                    case 'k':
+                                    case 'l':
+                                    case 'm':
+                                    case 'n':
+                                    case 'o':
+                                    case 'p':
+                                    case 'q':
+                                    case 'r':
+                                    case 't':
+                                    case 'u':
+                                    case 'v':
+                                    case 'w':
+                                    case 'x':
+                                    case 'y':
+                                    case 'z':
+                                    	{
+                                        alt13 = 16;
+                                        }
+                                        break;
+                                    	default:
+                                        	alt13 = 4;
+                                        	break;}
+                                
+                                }
+                                else if ( (LA13_66 == ' ' || (LA13_66 >= 'A' && LA13_66 <= 'Z') || (LA13_66 >= 'a' && LA13_66 <= 's') || (LA13_66 >= 'u' && LA13_66 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    NoViableAltException nvae_d13s66 =
+                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 66, input);
+                                
+                                    throw nvae_d13s66;
+                                }
+                            }
+                            else if ( (LA13_58 == ' ' || (LA13_58 >= 'A' && LA13_58 <= 'Z') || (LA13_58 >= 'a' && LA13_58 <= 'b') || (LA13_58 >= 'd' && LA13_58 <= 'z')) )
+                            {
+                                alt13 = 16;
+                            }
+                            else 
+                            {
+                                NoViableAltException nvae_d13s58 =
+                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 58, input);
+                            
+                                throw nvae_d13s58;
+                            }
+                        }
+                        else if ( (LA13_48 == ' ' || (LA13_48 >= 'A' && LA13_48 <= 'Z') || (LA13_48 >= 'a' && LA13_48 <= 'd') || (LA13_48 >= 'f' && LA13_48 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            NoViableAltException nvae_d13s48 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 48, input);
+                        
+                            throw nvae_d13s48;
+                        }
+                    }
+                    else if ( (LA13_35 == ' ' || (LA13_35 >= 'A' && LA13_35 <= 'Z') || (LA13_35 >= 'a' && LA13_35 <= 'k') || (LA13_35 >= 'm' && LA13_35 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s35 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 35, input);
+                    
+                        throw nvae_d13s35;
+                    }
+                }
+                else if ( (LA13_23 == ' ' || (LA13_23 >= 'A' && LA13_23 <= 'Z') || (LA13_23 >= 'a' && LA13_23 <= 'e') || (LA13_23 >= 'g' && LA13_23 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s23 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 23, input);
+                
+                    throw nvae_d13s23;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'f':
         	{
             switch ( input.LA(2) ) 
             {
-            case 'o':
-            	{
-                alt10 = 5;
-                }
-                break;
             case 'r':
             	{
-                alt10 = 7;
+                int LA13_24 = input.LA(3);
+                
+                if ( (LA13_24 == 'o') )
+                {
+                    int LA13_36 = input.LA(4);
+                    
+                    if ( (LA13_36 == 'm') )
+                    {
+                        int LA13_49 = input.LA(5);
+                        
+                        if ( (LA13_49 == ' ' || (LA13_49 >= 'A' && LA13_49 <= 'Z') || (LA13_49 >= 'a' && LA13_49 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            alt13 = 8;}
+                    }
+                    else if ( (LA13_36 == ' ' || (LA13_36 >= 'A' && LA13_36 <= 'Z') || (LA13_36 >= 'a' && LA13_36 <= 'l') || (LA13_36 >= 'n' && LA13_36 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s36 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 36, input);
+                    
+                        throw nvae_d13s36;
+                    }
+                }
+                else if ( (LA13_24 == ' ' || (LA13_24 >= 'A' && LA13_24 <= 'Z') || (LA13_24 >= 'a' && LA13_24 <= 'n') || (LA13_24 >= 'p' && LA13_24 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s24 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 24, input);
+                
+                    throw nvae_d13s24;
+                }
+                }
+                break;
+            case 'o':
+            	{
+                int LA13_25 = input.LA(3);
+                
+                if ( (LA13_25 == 'r') )
+                {
+                    int LA13_37 = input.LA(4);
+                    
+                    if ( (LA13_37 == ' ' || (LA13_37 >= 'A' && LA13_37 <= 'Z') || (LA13_37 >= 'a' && LA13_37 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        alt13 = 6;}
+                }
+                else if ( (LA13_25 == ' ' || (LA13_25 >= 'A' && LA13_25 <= 'Z') || (LA13_25 >= 'a' && LA13_25 <= 'q') || (LA13_25 >= 's' && LA13_25 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s25 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 25, input);
+                
+                    throw nvae_d13s25;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'p':
+            case 'q':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
                 }
                 break;
             	default:
-                	alt10 = 10;
+                	alt13 = 11;
                 	break;}
         
             }
             break;
         case 'o':
         	{
-            int LA10_7 = input.LA(2);
-            
-            if ( (LA10_7 == 'f') )
+            switch ( input.LA(2) ) 
             {
-                alt10 = 6;
-            }
-            else 
-            {
-                alt10 = 10;}
+            case 'f':
+            	{
+                int LA13_26 = input.LA(3);
+                
+                if ( (LA13_26 == ' ' || (LA13_26 >= 'A' && LA13_26 <= 'Z') || (LA13_26 >= 'a' && LA13_26 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    alt13 = 7;}
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'L':
         	{
-            int LA10_8 = input.LA(2);
-            
-            if ( (LA10_8 == 'o') )
+            switch ( input.LA(2) ) 
             {
-                int LA10_23 = input.LA(3);
+            case 'o':
+            	{
+                int LA13_27 = input.LA(3);
                 
-                if ( (LA10_23 == 'g') )
+                if ( (LA13_27 == 'g') )
                 {
-                    int LA10_27 = input.LA(4);
+                    int LA13_39 = input.LA(4);
                     
-                    if ( (LA10_27 == 'g') )
+                    if ( (LA13_39 == 'g') )
                     {
-                        int LA10_29 = input.LA(5);
+                        int LA13_51 = input.LA(5);
                         
-                        if ( (LA10_29 == 'i') )
+                        if ( (LA13_51 == 'i') )
                         {
-                            int LA10_30 = input.LA(6);
+                            int LA13_60 = input.LA(6);
                             
-                            if ( (LA10_30 == 'n') )
+                            if ( (LA13_60 == 'n') )
                             {
-                                int LA10_31 = input.LA(7);
+                                int LA13_67 = input.LA(7);
                                 
-                                if ( (LA10_31 == 'g') )
+                                if ( (LA13_67 == 'g') )
                                 {
-                                    int LA10_32 = input.LA(8);
+                                    int LA13_73 = input.LA(8);
                                     
-                                    if ( (LA10_32 == ' ') )
+                                    if ( (LA13_73 == ' ') )
                                     {
-                                        int LA10_33 = input.LA(9);
+                                        int LA13_76 = input.LA(9);
                                         
-                                        if ( (LA10_33 == 'c') )
+                                        if ( (LA13_76 == 'c') )
                                         {
-                                            int LA10_34 = input.LA(10);
+                                            int LA13_77 = input.LA(10);
                                             
-                                            if ( (LA10_34 == 'h') )
+                                            if ( (LA13_77 == 'h') )
                                             {
-                                                int LA10_35 = input.LA(11);
+                                                int LA13_78 = input.LA(11);
                                                 
-                                                if ( (LA10_35 == 'a') )
+                                                if ( (LA13_78 == 'a') )
                                                 {
-                                                    int LA10_36 = input.LA(12);
+                                                    int LA13_79 = input.LA(12);
                                                     
-                                                    if ( (LA10_36 == 't') )
+                                                    if ( (LA13_79 == 't') )
                                                     {
-                                                        int LA10_37 = input.LA(13);
+                                                        int LA13_80 = input.LA(13);
                                                         
-                                                        if ( (LA10_37 == ' ') )
+                                                        if ( (LA13_80 == ' ') )
                                                         {
-                                                            int LA10_38 = input.LA(14);
+                                                            int LA13_81 = input.LA(14);
                                                             
-                                                            if ( (LA10_38 == 't') )
+                                                            if ( (LA13_81 == 't') )
                                                             {
-                                                                int LA10_39 = input.LA(15);
+                                                                int LA13_82 = input.LA(15);
                                                                 
-                                                                if ( (LA10_39 == 'a') )
+                                                                if ( (LA13_82 == 'a') )
                                                                 {
-                                                                    int LA10_40 = input.LA(16);
+                                                                    int LA13_83 = input.LA(16);
                                                                     
-                                                                    if ( (LA10_40 == 'b') )
+                                                                    if ( (LA13_83 == 'b') )
                                                                     {
-                                                                        int LA10_41 = input.LA(17);
+                                                                        int LA13_84 = input.LA(17);
                                                                         
-                                                                        if ( ((LA10_41 >= '\u0000' && LA10_41 <= '\uFFFE')) )
+                                                                        if ( ((LA13_84 >= '\u0000' && LA13_84 <= '\uFFFE')) )
                                                                         {
-                                                                            alt10 = 14;
+                                                                            alt13 = 15;
                                                                         }
                                                                         else 
                                                                         {
-                                                                            alt10 = 8;}
+                                                                            alt13 = 9;}
                                                                     }
                                                                     else 
                                                                     {
-                                                                        NoViableAltException nvae_d10s40 =
-                                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 40, input);
+                                                                        NoViableAltException nvae_d13s83 =
+                                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 83, input);
                                                                     
-                                                                        throw nvae_d10s40;
+                                                                        throw nvae_d13s83;
                                                                     }
                                                                 }
                                                                 else 
                                                                 {
-                                                                    NoViableAltException nvae_d10s39 =
-                                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 39, input);
+                                                                    NoViableAltException nvae_d13s82 =
+                                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 82, input);
                                                                 
-                                                                    throw nvae_d10s39;
+                                                                    throw nvae_d13s82;
                                                                 }
                                                             }
                                                             else 
                                                             {
-                                                                NoViableAltException nvae_d10s38 =
-                                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 38, input);
+                                                                NoViableAltException nvae_d13s81 =
+                                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 81, input);
                                                             
-                                                                throw nvae_d10s38;
+                                                                throw nvae_d13s81;
                                                             }
                                                         }
                                                         else 
                                                         {
-                                                            NoViableAltException nvae_d10s37 =
-                                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 37, input);
+                                                            NoViableAltException nvae_d13s80 =
+                                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 80, input);
                                                         
-                                                            throw nvae_d10s37;
+                                                            throw nvae_d13s80;
                                                         }
                                                     }
                                                     else 
                                                     {
-                                                        NoViableAltException nvae_d10s36 =
-                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 36, input);
+                                                        NoViableAltException nvae_d13s79 =
+                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 79, input);
                                                     
-                                                        throw nvae_d10s36;
+                                                        throw nvae_d13s79;
                                                     }
                                                 }
                                                 else 
                                                 {
-                                                    NoViableAltException nvae_d10s35 =
-                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 35, input);
+                                                    NoViableAltException nvae_d13s78 =
+                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 78, input);
                                                 
-                                                    throw nvae_d10s35;
+                                                    throw nvae_d13s78;
                                                 }
                                             }
                                             else 
                                             {
-                                                NoViableAltException nvae_d10s34 =
-                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 34, input);
+                                                NoViableAltException nvae_d13s77 =
+                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 77, input);
                                             
-                                                throw nvae_d10s34;
+                                                throw nvae_d13s77;
                                             }
+                                        }
+                                        else if ( (LA13_76 == 'r') )
+                                        {
+                                            alt13 = 16;
                                         }
                                         else 
                                         {
-                                            NoViableAltException nvae_d10s33 =
-                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 33, input);
+                                            NoViableAltException nvae_d13s76 =
+                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 76, input);
                                         
-                                            throw nvae_d10s33;
+                                            throw nvae_d13s76;
                                         }
+                                    }
+                                    else if ( ((LA13_73 >= 'A' && LA13_73 <= 'Z') || (LA13_73 >= 'a' && LA13_73 <= 'z')) )
+                                    {
+                                        alt13 = 16;
                                     }
                                     else 
                                     {
-                                        NoViableAltException nvae_d10s32 =
-                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 32, input);
+                                        NoViableAltException nvae_d13s73 =
+                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 73, input);
                                     
-                                        throw nvae_d10s32;
+                                        throw nvae_d13s73;
                                     }
+                                }
+                                else if ( (LA13_67 == ' ' || (LA13_67 >= 'A' && LA13_67 <= 'Z') || (LA13_67 >= 'a' && LA13_67 <= 'f') || (LA13_67 >= 'h' && LA13_67 <= 'z')) )
+                                {
+                                    alt13 = 16;
                                 }
                                 else 
                                 {
-                                    NoViableAltException nvae_d10s31 =
-                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 31, input);
+                                    NoViableAltException nvae_d13s67 =
+                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 67, input);
                                 
-                                    throw nvae_d10s31;
+                                    throw nvae_d13s67;
                                 }
+                            }
+                            else if ( (LA13_60 == ' ' || (LA13_60 >= 'A' && LA13_60 <= 'Z') || (LA13_60 >= 'a' && LA13_60 <= 'm') || (LA13_60 >= 'o' && LA13_60 <= 'z')) )
+                            {
+                                alt13 = 16;
                             }
                             else 
                             {
-                                NoViableAltException nvae_d10s30 =
-                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 30, input);
+                                NoViableAltException nvae_d13s60 =
+                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 60, input);
                             
-                                throw nvae_d10s30;
+                                throw nvae_d13s60;
                             }
+                        }
+                        else if ( (LA13_51 == ' ' || (LA13_51 >= 'A' && LA13_51 <= 'Z') || (LA13_51 >= 'a' && LA13_51 <= 'h') || (LA13_51 >= 'j' && LA13_51 <= 'z')) )
+                        {
+                            alt13 = 16;
                         }
                         else 
                         {
-                            NoViableAltException nvae_d10s29 =
-                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 29, input);
+                            NoViableAltException nvae_d13s51 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 51, input);
                         
-                            throw nvae_d10s29;
+                            throw nvae_d13s51;
                         }
+                    }
+                    else if ( (LA13_39 == ' ' || (LA13_39 >= 'A' && LA13_39 <= 'Z') || (LA13_39 >= 'a' && LA13_39 <= 'f') || (LA13_39 >= 'h' && LA13_39 <= 'z')) )
+                    {
+                        alt13 = 16;
                     }
                     else 
                     {
-                        NoViableAltException nvae_d10s27 =
-                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 27, input);
+                        NoViableAltException nvae_d13s39 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 39, input);
                     
-                        throw nvae_d10s27;
+                        throw nvae_d13s39;
                     }
+                }
+                else if ( (LA13_27 == ' ' || (LA13_27 >= 'A' && LA13_27 <= 'Z') || (LA13_27 >= 'a' && LA13_27 <= 'f') || (LA13_27 >= 'h' && LA13_27 <= 'z')) )
+                {
+                    alt13 = 16;
                 }
                 else 
                 {
-                    NoViableAltException nvae_d10s23 =
-                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 23, input);
+                    NoViableAltException nvae_d13s27 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 27, input);
                 
-                    throw nvae_d10s23;
+                    throw nvae_d13s27;
                 }
-            }
-            else 
-            {
-                alt10 = 10;}
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'p':
         	{
-            int LA10_9 = input.LA(2);
-            
-            if ( (LA10_9 == 'o') )
+            switch ( input.LA(2) ) 
             {
-                alt10 = 9;
-            }
-            else 
-            {
-                alt10 = 10;}
+            case 'o':
+            	{
+                int LA13_28 = input.LA(3);
+                
+                if ( (LA13_28 == 'i') )
+                {
+                    int LA13_40 = input.LA(4);
+                    
+                    if ( (LA13_40 == 'n') )
+                    {
+                        int LA13_52 = input.LA(5);
+                        
+                        if ( (LA13_52 == 't') )
+                        {
+                            switch ( input.LA(6) ) 
+                            {
+                            case ' ':
+                            case 'A':
+                            case 'B':
+                            case 'C':
+                            case 'D':
+                            case 'E':
+                            case 'F':
+                            case 'G':
+                            case 'H':
+                            case 'I':
+                            case 'J':
+                            case 'K':
+                            case 'L':
+                            case 'M':
+                            case 'N':
+                            case 'O':
+                            case 'P':
+                            case 'Q':
+                            case 'R':
+                            case 'S':
+                            case 'T':
+                            case 'U':
+                            case 'V':
+                            case 'W':
+                            case 'X':
+                            case 'Y':
+                            case 'Z':
+                            case 'a':
+                            case 'b':
+                            case 'c':
+                            case 'd':
+                            case 'e':
+                            case 'f':
+                            case 'g':
+                            case 'h':
+                            case 'i':
+                            case 'j':
+                            case 'k':
+                            case 'l':
+                            case 'm':
+                            case 'n':
+                            case 'o':
+                            case 'p':
+                            case 'q':
+                            case 'r':
+                            case 't':
+                            case 'u':
+                            case 'v':
+                            case 'w':
+                            case 'x':
+                            case 'y':
+                            case 'z':
+                            	{
+                                alt13 = 16;
+                                }
+                                break;
+                            case 's':
+                            	{
+                                int LA13_69 = input.LA(7);
+                                
+                                if ( (LA13_69 == ' ' || (LA13_69 >= 'A' && LA13_69 <= 'Z') || (LA13_69 >= 'a' && LA13_69 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    alt13 = 10;}
+                                }
+                                break;
+                            	default:
+                                	alt13 = 10;
+                                	break;}
+                        
+                        }
+                        else if ( (LA13_52 == ' ' || (LA13_52 >= 'A' && LA13_52 <= 'Z') || (LA13_52 >= 'a' && LA13_52 <= 's') || (LA13_52 >= 'u' && LA13_52 <= 'z')) )
+                        {
+                            alt13 = 16;
+                        }
+                        else 
+                        {
+                            NoViableAltException nvae_d13s52 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 52, input);
+                        
+                            throw nvae_d13s52;
+                        }
+                    }
+                    else if ( (LA13_40 == ' ' || (LA13_40 >= 'A' && LA13_40 <= 'Z') || (LA13_40 >= 'a' && LA13_40 <= 'm') || (LA13_40 >= 'o' && LA13_40 <= 'z')) )
+                    {
+                        alt13 = 16;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d13s40 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 40, input);
+                    
+                        throw nvae_d13s40;
+                    }
+                }
+                else if ( (LA13_28 == ' ' || (LA13_28 >= 'A' && LA13_28 <= 'Z') || (LA13_28 >= 'a' && LA13_28 <= 'h') || (LA13_28 >= 'j' && LA13_28 <= 'z')) )
+                {
+                    alt13 = 16;
+                }
+                else 
+                {
+                    NoViableAltException nvae_d13s28 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 28, input);
+                
+                    throw nvae_d13s28;
+                }
+                }
+                break;
+            case ' ':
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+            	{
+                alt13 = 16;
+                }
+                break;
+            	default:
+                	alt13 = 11;
+                	break;}
+        
             }
             break;
         case 'A':
@@ -1088,7 +2614,6 @@ public class CombatAnalyzerLexer : Lexer
         case 'm':
         case 'n':
         case 'q':
-        case 'r':
         case 's':
         case 't':
         case 'u':
@@ -1097,7 +2622,15 @@ public class CombatAnalyzerLexer : Lexer
         case 'y':
         case 'z':
         	{
-            alt10 = 10;
+            int LA13_11 = input.LA(2);
+            
+            if ( (LA13_11 == ' ' || (LA13_11 >= 'A' && LA13_11 <= 'Z') || (LA13_11 >= 'a' && LA13_11 <= 'z')) )
+            {
+                alt13 = 16;
+            }
+            else 
+            {
+                alt13 = 11;}
             }
             break;
         case '0':
@@ -1111,28 +2644,28 @@ public class CombatAnalyzerLexer : Lexer
         case '8':
         case '9':
         	{
-            alt10 = 11;
+            alt13 = 12;
             }
             break;
         case '\n':
         case '\r':
         	{
-            alt10 = 12;
+            alt13 = 13;
             }
             break;
         case '#':
         	{
-            alt10 = 13;
+            alt13 = 14;
             }
             break;
         	default:
-        	    NoViableAltException nvae_d10s0 =
-        	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 0, input);
+        	    NoViableAltException nvae_d13s0 =
+        	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | REFLECT | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CL_COMMENT | CL_SYS_MSG | CL_REFLECT_LINE );", 13, 0, input);
         
-        	    throw nvae_d10s0;
+        	    throw nvae_d13s0;
         }
         
-        switch (alt10) 
+        switch (alt13) 
         {
             case 1 :
                 // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:10: DAMAGE
@@ -1156,79 +2689,93 @@ public class CombatAnalyzerLexer : Lexer
                 }
                 break;
             case 4 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:28: WITH
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:28: REFLECT
+                {
+                	mREFLECT(); 
+                
+                }
+                break;
+            case 5 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:36: WITH
                 {
                 	mWITH(); 
                 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:33: FOR
+            case 6 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:41: FOR
                 {
                 	mFOR(); 
                 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:37: OF
+            case 7 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:45: OF
                 {
                 	mOF(); 
                 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:40: FROM
+            case 8 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:48: FROM
                 {
                 	mFROM(); 
                 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:45: LOGGING
+            case 9 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:53: LOGGING
                 {
                 	mLOGGING(); 
                 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:53: POINTS
+            case 10 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:61: POINTS
                 {
                 	mPOINTS(); 
                 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:60: CHAR
+            case 11 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:68: CHAR
                 {
                 	mCHAR(); 
                 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:65: DIGITS
+            case 12 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:73: DIGITS
                 {
                 	mDIGITS(); 
                 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:72: NEWLINE
+            case 13 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:80: NEWLINE
                 {
                 	mNEWLINE(); 
                 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:80: CS_COMMENT
+            case 14 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:88: CL_COMMENT
                 {
-                	mCS_COMMENT(); 
+                	mCL_COMMENT(); 
                 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:91: CS_LOG_MSG_SYS
+            case 15 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:99: CL_SYS_MSG
                 {
-                	mCS_LOG_MSG_SYS(); 
+                	mCL_SYS_MSG(); 
+                
+                }
+                break;
+            case 16 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:110: CL_REFLECT_LINE
+                {
+                	mCL_REFLECT_LINE(); 
                 
                 }
                 break;
