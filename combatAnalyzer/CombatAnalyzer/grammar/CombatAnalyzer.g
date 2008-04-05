@@ -5,6 +5,7 @@ options
     language=CSharp;
 }
 
+
 // TOKEN DEFINITIONS
 DAMAGE	: 'damage';
 WOUND	: ('are '|'is ')? 'wound' ('ed'|'s')?;

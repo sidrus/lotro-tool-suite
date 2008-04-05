@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 00:10:49
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 01:19:58
 
 using System;
 using Antlr.Runtime;
@@ -50,8 +50,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = DAMAGE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:8: ( 'damage' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:10: 'damage'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:8: ( 'damage' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:10: 'damage'
             {
             	Match("damage"); 
 
@@ -72,10 +72,10 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = WOUND;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:7: ( ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )? )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:9: ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )?
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:7: ( ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:9: ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )?
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:9: ( 'are ' | 'is ' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:9: ( 'are ' | 'is ' )?
             	int alt1 = 3;
             	int LA1_0 = input.LA(1);
             	
@@ -90,7 +90,7 @@ public class CombatAnalyzerLexer : Lexer
             	switch (alt1) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:10: 'are '
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:10: 'are '
             	        {
             	        	Match("are "); 
 
@@ -98,7 +98,7 @@ public class CombatAnalyzerLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:17: 'is '
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:17: 'is '
             	        {
             	        	Match("is "); 
 
@@ -110,7 +110,7 @@ public class CombatAnalyzerLexer : Lexer
 
             	Match("wound"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:33: ( 'ed' | 's' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:33: ( 'ed' | 's' )?
             	int alt2 = 3;
             	int LA2_0 = input.LA(1);
             	
@@ -125,7 +125,7 @@ public class CombatAnalyzerLexer : Lexer
             	switch (alt2) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:34: 'ed'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:34: 'ed'
             	        {
             	        	Match("ed"); 
 
@@ -133,7 +133,7 @@ public class CombatAnalyzerLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:39: 's'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:39: 's'
             	        {
             	        	Match('s'); 
             	        
@@ -159,10 +159,10 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = HEAL;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:6: ( ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )? )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:8: ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )?
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:6: ( ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:8: ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )?
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:8: ( 'are ' | 'is ' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:8: ( 'are ' | 'is ' )?
             	int alt3 = 3;
             	int LA3_0 = input.LA(1);
             	
@@ -177,7 +177,7 @@ public class CombatAnalyzerLexer : Lexer
             	switch (alt3) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:9: 'are '
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:9: 'are '
             	        {
             	        	Match("are "); 
 
@@ -185,7 +185,7 @@ public class CombatAnalyzerLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:16: 'is '
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:16: 'is '
             	        {
             	        	Match("is "); 
 
@@ -197,7 +197,7 @@ public class CombatAnalyzerLexer : Lexer
 
             	Match("heal"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:31: ( 'ed' | 's' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:31: ( 'ed' | 's' )?
             	int alt4 = 3;
             	int LA4_0 = input.LA(1);
             	
@@ -212,7 +212,7 @@ public class CombatAnalyzerLexer : Lexer
             	switch (alt4) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:32: 'ed'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:32: 'ed'
             	        {
             	        	Match("ed"); 
 
@@ -220,7 +220,7 @@ public class CombatAnalyzerLexer : Lexer
             	        }
             	        break;
             	    case 2 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:37: 's'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:37: 's'
             	        {
             	        	Match('s'); 
             	        
@@ -246,12 +246,12 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = REFLECT;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:9: ( 'reflect' ( 's' )? )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:11: 'reflect' ( 's' )?
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:9: ( 'reflect' ( 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:11: 'reflect' ( 's' )?
             {
             	Match("reflect"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:21: ( 's' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:21: ( 's' )?
             	int alt5 = 2;
             	int LA5_0 = input.LA(1);
             	
@@ -262,7 +262,7 @@ public class CombatAnalyzerLexer : Lexer
             	switch (alt5) 
             	{
             	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:21: 's'
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:21: 's'
             	        {
             	        	Match('s'); 
             	        
@@ -288,8 +288,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:6: ( 'with' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:8: 'with'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:6: ( 'with' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:8: 'with'
             {
             	Match("with"); 
 
@@ -310,8 +310,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:5: ( 'for' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:7: 'for'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:5: ( 'for' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:7: 'for'
             {
             	Match("for"); 
 
@@ -332,8 +332,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = OF;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:4: ( 'of' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:6: 'of'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:4: ( 'of' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:6: 'of'
             {
             	Match("of"); 
 
@@ -354,8 +354,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FROM;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:6: ( 'from' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:8: 'from'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:6: ( 'from' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:8: 'from'
             {
             	Match("from"); 
 
@@ -376,8 +376,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = LOGGING;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:9: ( 'Logging chat tab' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:11: 'Logging chat tab'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:9: ( 'Logging chat tab' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:11: 'Logging chat tab'
             {
             	Match("Logging chat tab"); 
 
@@ -398,15 +398,15 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = POINTS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:8: ( ( 'point' ( 's' )? ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:10: ( 'point' ( 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:8: ( ( 'point' ( 's' )? ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( 'point' ( 's' )? )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:10: ( 'point' ( 's' )? )
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:11: 'point' ( 's' )?
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( 'point' ( 's' )? )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:11: 'point' ( 's' )?
             	{
             		Match("point"); 
 
-            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:19: ( 's' )?
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:19: ( 's' )?
             		int alt6 = 2;
             		int LA6_0 = input.LA(1);
             		
@@ -417,7 +417,7 @@ public class CombatAnalyzerLexer : Lexer
             		switch (alt6) 
             		{
             		    case 1 :
-            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:19: 's'
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:19: 's'
             		        {
             		        	Match('s'); 
             		        
@@ -446,8 +446,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CHAR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:8: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:8: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             	if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -478,10 +478,10 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = DIGITS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:8: ( ( '0' .. '9' )+ )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:10: ( '0' .. '9' )+
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:8: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:10: ( '0' .. '9' )+
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:10: ( '0' .. '9' )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:10: ( '0' .. '9' )+
             	int cnt7 = 0;
             	do 
             	{
@@ -497,7 +497,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt7) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:20:11: '0' .. '9'
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:11: '0' .. '9'
             			    {
             			    	MatchRange('0','9'); 
             			    
@@ -533,13 +533,13 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = NEWLINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:9: ( ( ( '\\r' )? '\\n' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:9: ( ( ( '\\r' )? '\\n' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:11: ( ( '\\r' )? '\\n' )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )? '\\n'
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:11: ( ( '\\r' )? '\\n' )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: ( '\\r' )? '\\n'
             	{
-            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )?
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: ( '\\r' )?
             		int alt8 = 2;
             		int LA8_0 = input.LA(1);
             		
@@ -550,7 +550,7 @@ public class CombatAnalyzerLexer : Lexer
             		switch (alt8) 
             		{
             		    case 1 :
-            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: '\\r'
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: '\\r'
             		        {
             		        	Match('\r'); 
             		        
@@ -580,12 +580,12 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CL_COMMENT;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:12: ( '###' ( options {greedy=false; } : . )* '###' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:14: '###' ( options {greedy=false; } : . )* '###'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:12: ( '###' ( options {greedy=false; } : . )* '###' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:14: '###' ( options {greedy=false; } : . )* '###'
             {
             	Match("###"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:20: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:20: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt9 = 2;
@@ -626,7 +626,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt9) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:47: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:47: .
             			    {
             			    	MatchAny(); 
             			    
@@ -661,11 +661,11 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CL_SYS_MSG;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:12: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:14: LOGGING ( options {greedy=false; } : . )* NEWLINE
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:12: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:14: LOGGING ( options {greedy=false; } : . )* NEWLINE
             {
             	mLOGGING(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:22: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:22: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt10 = 2;
@@ -688,7 +688,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt10) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:49: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:49: .
             			    {
             			    	MatchAny(); 
             			    
@@ -722,10 +722,10 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CL_REFLECT_LINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:17: ( ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:17: ( ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: ( CHAR )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: ( CHAR )+
             	int cnt11 = 0;
             	do 
             	{
@@ -741,7 +741,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt11) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:19: CHAR
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: CHAR
             			    {
             			    	mCHAR(); 
             			    
@@ -762,7 +762,7 @@ public class CombatAnalyzerLexer : Lexer
 
             	Match(' '); 
             	mREFLECT(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:37: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:37: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt12 = 2;
@@ -785,7 +785,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt12) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:64: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:64: .
             			    {
             			    	MatchAny(); 
             			    
