@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-03-31 23:10:07
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 00:00:08
 
 using System;
 using Antlr.Runtime;
@@ -10,23 +10,22 @@ using Stack 		= Antlr.Runtime.Collections.StackList;
 
 public class CombatAnalyzerLexer : Lexer 
 {
+    public const int NEWLINE = 15;
+    public const int HEAL = 6;
+    public const int POINTS = 12;
     public const int WOUND = 5;
-    public const int POINTS = 15;
-    public const int DIGITS = 14;
     public const int DAMAGE = 4;
-    public const int FOR = 9;
-    public const int ARE_WOUNDED = 7;
-    public const int LOGGING = 12;
+    public const int DIGITS = 14;
+    public const int CHAR = 13;
+    public const int CS_LOG_MSG_SYS = 17;
+    public const int FOR = 8;
+    public const int CS_COMMENT = 16;
+    public const int FROM = 10;
+    public const int LOGGING = 11;
+    public const int Tokens = 18;
+    public const int OF = 9;
     public const int EOF = -1;
-    public const int OF = 10;
-    public const int Tokens = 19;
-    public const int WOUNDS = 6;
-    public const int NEWLINE = 16;
-    public const int CS_LOG_MSG_SYS = 18;
-    public const int CHARS = 13;
-    public const int CS_COMMENT = 17;
-    public const int FROM = 11;
-    public const int WITH = 8;
+    public const int WITH = 7;
 
     public CombatAnalyzerLexer() 
     {
@@ -49,8 +48,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = DAMAGE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:7:8: ( 'damage' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:7:10: 'damage'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:8: ( 'damage' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:10: 'damage'
             {
             	Match("damage"); 
 
@@ -71,10 +70,75 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = WOUND;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:8:7: ( 'wound' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:8:9: 'wound'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:7: ( ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:9: ( 'are ' | 'is ' )? 'wound' ( 'ed' | 's' )?
             {
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:9: ( 'are ' | 'is ' )?
+            	int alt1 = 3;
+            	int LA1_0 = input.LA(1);
+            	
+            	if ( (LA1_0 == 'a') )
+            	{
+            	    alt1 = 1;
+            	}
+            	else if ( (LA1_0 == 'i') )
+            	{
+            	    alt1 = 2;
+            	}
+            	switch (alt1) 
+            	{
+            	    case 1 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:10: 'are '
+            	        {
+            	        	Match("are "); 
+
+            	        
+            	        }
+            	        break;
+            	    case 2 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:17: 'is '
+            	        {
+            	        	Match("is "); 
+
+            	        
+            	        }
+            	        break;
+            	
+            	}
+
             	Match("wound"); 
+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:33: ( 'ed' | 's' )?
+            	int alt2 = 3;
+            	int LA2_0 = input.LA(1);
+            	
+            	if ( (LA2_0 == 'e') )
+            	{
+            	    alt2 = 1;
+            	}
+            	else if ( (LA2_0 == 's') )
+            	{
+            	    alt2 = 2;
+            	}
+            	switch (alt2) 
+            	{
+            	    case 1 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:34: 'ed'
+            	        {
+            	        	Match("ed"); 
+
+            	        
+            	        }
+            	        break;
+            	    case 2 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:39: 's'
+            	        {
+            	        	Match('s'); 
+            	        
+            	        }
+            	        break;
+            	
+            	}
 
             
             }
@@ -87,16 +151,81 @@ public class CombatAnalyzerLexer : Lexer
     }
     // $ANTLR end WOUND
 
-    // $ANTLR start WOUNDS 
-    public void mWOUNDS() // throws RecognitionException [2]
+    // $ANTLR start HEAL 
+    public void mHEAL() // throws RecognitionException [2]
     {
         try 
     	{
-            int _type = WOUNDS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:8: ( 'wounds' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:9:10: 'wounds'
+            int _type = HEAL;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:6: ( ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )? )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:8: ( 'are ' | 'is ' )? 'heal' ( 'ed' | 's' )?
             {
-            	Match("wounds"); 
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:8: ( 'are ' | 'is ' )?
+            	int alt3 = 3;
+            	int LA3_0 = input.LA(1);
+            	
+            	if ( (LA3_0 == 'a') )
+            	{
+            	    alt3 = 1;
+            	}
+            	else if ( (LA3_0 == 'i') )
+            	{
+            	    alt3 = 2;
+            	}
+            	switch (alt3) 
+            	{
+            	    case 1 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:9: 'are '
+            	        {
+            	        	Match("are "); 
+
+            	        
+            	        }
+            	        break;
+            	    case 2 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:16: 'is '
+            	        {
+            	        	Match("is "); 
+
+            	        
+            	        }
+            	        break;
+            	
+            	}
+
+            	Match("heal"); 
+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:31: ( 'ed' | 's' )?
+            	int alt4 = 3;
+            	int LA4_0 = input.LA(1);
+            	
+            	if ( (LA4_0 == 'e') )
+            	{
+            	    alt4 = 1;
+            	}
+            	else if ( (LA4_0 == 's') )
+            	{
+            	    alt4 = 2;
+            	}
+            	switch (alt4) 
+            	{
+            	    case 1 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:32: 'ed'
+            	        {
+            	        	Match("ed"); 
+
+            	        
+            	        }
+            	        break;
+            	    case 2 :
+            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:37: 's'
+            	        {
+            	        	Match('s'); 
+            	        
+            	        }
+            	        break;
+            	
+            	}
 
             
             }
@@ -107,29 +236,7 @@ public class CombatAnalyzerLexer : Lexer
     	{
         }
     }
-    // $ANTLR end WOUNDS
-
-    // $ANTLR start ARE_WOUNDED 
-    public void mARE_WOUNDED() // throws RecognitionException [2]
-    {
-        try 
-    	{
-            int _type = ARE_WOUNDED;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:13: ( 'are wounded' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:10:15: 'are wounded'
-            {
-            	Match("are wounded"); 
-
-            
-            }
-    
-            this.type = _type;
-        }
-        finally 
-    	{
-        }
-    }
-    // $ANTLR end ARE_WOUNDED
+    // $ANTLR end HEAL
 
     // $ANTLR start WITH 
     public void mWITH() // throws RecognitionException [2]
@@ -137,8 +244,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = WITH;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:6: ( 'with' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:11:8: 'with'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:6: ( 'with' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:8: 'with'
             {
             	Match("with"); 
 
@@ -159,8 +266,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:5: ( 'for' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:12:7: 'for'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:5: ( 'for' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:7: 'for'
             {
             	Match("for"); 
 
@@ -181,8 +288,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = OF;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:4: ( 'of' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:13:6: 'of'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:4: ( 'of' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:6: 'of'
             {
             	Match("of"); 
 
@@ -203,8 +310,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FROM;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:6: ( 'from' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:14:8: 'from'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:6: ( 'from' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:8: 'from'
             {
             	Match("from"); 
 
@@ -225,8 +332,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = LOGGING;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:9: ( 'Logging chat tab' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:11: 'Logging chat tab'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:9: ( 'Logging chat tab' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:11: 'Logging chat tab'
             {
             	Match("Logging chat tab"); 
 
@@ -241,14 +348,62 @@ public class CombatAnalyzerLexer : Lexer
     }
     // $ANTLR end LOGGING
 
-    // $ANTLR start CHARS 
-    public void mCHARS() // throws RecognitionException [2]
+    // $ANTLR start POINTS 
+    public void mPOINTS() // throws RecognitionException [2]
     {
         try 
     	{
-            int _type = CHARS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:7: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:9: ( 'a' .. 'z' | 'A' .. 'Z' )
+            int _type = POINTS;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:8: ( ( 'point' ( 's' )? ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:10: ( 'point' ( 's' )? )
+            {
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:10: ( 'point' ( 's' )? )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:11: 'point' ( 's' )?
+            	{
+            		Match("point"); 
+
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:19: ( 's' )?
+            		int alt5 = 2;
+            		int LA5_0 = input.LA(1);
+            		
+            		if ( (LA5_0 == 's') )
+            		{
+            		    alt5 = 1;
+            		}
+            		switch (alt5) 
+            		{
+            		    case 1 :
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:17:19: 's'
+            		        {
+            		        	Match('s'); 
+            		        
+            		        }
+            		        break;
+            		
+            		}
+
+            	
+            	}
+
+            
+            }
+    
+            this.type = _type;
+        }
+        finally 
+    	{
+        }
+    }
+    // $ANTLR end POINTS
+
+    // $ANTLR start CHAR 
+    public void mCHAR() // throws RecognitionException [2]
+    {
+        try 
+    	{
+            int _type = CHAR;
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:18:8: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             	if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') || (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) 
             	{
@@ -271,7 +426,7 @@ public class CombatAnalyzerLexer : Lexer
     	{
         }
     }
-    // $ANTLR end CHARS
+    // $ANTLR end CHAR
 
     // $ANTLR start DIGITS 
     public void mDIGITS() // throws RecognitionException [2]
@@ -279,10 +434,44 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = DIGITS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:8: ( '0' .. '9' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:10: '0' .. '9'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:8: ( ( '0' .. '9' )+ )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( '0' .. '9' )+
             {
-            	MatchRange('0','9'); 
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:10: ( '0' .. '9' )+
+            	int cnt6 = 0;
+            	do 
+            	{
+            	    int alt6 = 2;
+            	    int LA6_0 = input.LA(1);
+            	    
+            	    if ( ((LA6_0 >= '0' && LA6_0 <= '9')) )
+            	    {
+            	        alt6 = 1;
+            	    }
+            	    
+            	
+            	    switch (alt6) 
+            		{
+            			case 1 :
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:19:11: '0' .. '9'
+            			    {
+            			    	MatchRange('0','9'); 
+            			    
+            			    }
+            			    break;
+            	
+            			default:
+            			    if ( cnt6 >= 1 ) goto loop6;
+            		            EarlyExitException eee =
+            		                new EarlyExitException(6, input);
+            		            throw eee;
+            	    }
+            	    cnt6++;
+            	} while (true);
+            	
+            	loop6:
+            		;	// Stops C# compiler whinging that label 'loop6' has no statements
+
             
             }
     
@@ -294,141 +483,42 @@ public class CombatAnalyzerLexer : Lexer
     }
     // $ANTLR end DIGITS
 
-    // $ANTLR start POINTS 
-    public void mPOINTS() // throws RecognitionException [2]
-    {
-        try 
-    	{
-            int _type = POINTS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:8: ( 'point' | 'points' )
-            int alt1 = 2;
-            int LA1_0 = input.LA(1);
-            
-            if ( (LA1_0 == 'p') )
-            {
-                int LA1_1 = input.LA(2);
-                
-                if ( (LA1_1 == 'o') )
-                {
-                    int LA1_2 = input.LA(3);
-                    
-                    if ( (LA1_2 == 'i') )
-                    {
-                        int LA1_3 = input.LA(4);
-                        
-                        if ( (LA1_3 == 'n') )
-                        {
-                            int LA1_4 = input.LA(5);
-                            
-                            if ( (LA1_4 == 't') )
-                            {
-                                int LA1_5 = input.LA(6);
-                                
-                                if ( (LA1_5 == 's') )
-                                {
-                                    alt1 = 2;
-                                }
-                                else 
-                                {
-                                    alt1 = 1;}
-                            }
-                            else 
-                            {
-                                NoViableAltException nvae_d1s4 =
-                                    new NoViableAltException("28:1: POINTS : ( 'point' | 'points' );", 1, 4, input);
-                            
-                                throw nvae_d1s4;
-                            }
-                        }
-                        else 
-                        {
-                            NoViableAltException nvae_d1s3 =
-                                new NoViableAltException("28:1: POINTS : ( 'point' | 'points' );", 1, 3, input);
-                        
-                            throw nvae_d1s3;
-                        }
-                    }
-                    else 
-                    {
-                        NoViableAltException nvae_d1s2 =
-                            new NoViableAltException("28:1: POINTS : ( 'point' | 'points' );", 1, 2, input);
-                    
-                        throw nvae_d1s2;
-                    }
-                }
-                else 
-                {
-                    NoViableAltException nvae_d1s1 =
-                        new NoViableAltException("28:1: POINTS : ( 'point' | 'points' );", 1, 1, input);
-                
-                    throw nvae_d1s1;
-                }
-            }
-            else 
-            {
-                NoViableAltException nvae_d1s0 =
-                    new NoViableAltException("28:1: POINTS : ( 'point' | 'points' );", 1, 0, input);
-            
-                throw nvae_d1s0;
-            }
-            switch (alt1) 
-            {
-                case 1 :
-                    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:10: 'point'
-                    {
-                    	Match("point"); 
-
-                    
-                    }
-                    break;
-                case 2 :
-                    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:20: 'points'
-                    {
-                    	Match("points"); 
-
-                    
-                    }
-                    break;
-            
-            }
-            this.type = _type;
-        }
-        finally 
-    	{
-        }
-    }
-    // $ANTLR end POINTS
-
     // $ANTLR start NEWLINE 
     public void mNEWLINE() // throws RecognitionException [2]
     {
         try 
     	{
             int _type = NEWLINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:29:9: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:29:11: ( '\\r' )? '\\n'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:9: ( ( ( '\\r' )? '\\n' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:11: ( ( '\\r' )? '\\n' )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:29:11: ( '\\r' )?
-            	int alt2 = 2;
-            	int LA2_0 = input.LA(1);
-            	
-            	if ( (LA2_0 == '\r') )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:11: ( ( '\\r' )? '\\n' )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: ( '\\r' )? '\\n'
             	{
-            	    alt2 = 1;
-            	}
-            	switch (alt2) 
-            	{
-            	    case 1 :
-            	        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:29:11: '\\r'
-            	        {
-            	        	Match('\r'); 
-            	        
-            	        }
-            	        break;
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: ( '\\r' )?
+            		int alt7 = 2;
+            		int LA7_0 = input.LA(1);
+            		
+            		if ( (LA7_0 == '\r') )
+            		{
+            		    alt7 = 1;
+            		}
+            		switch (alt7) 
+            		{
+            		    case 1 :
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:21:12: '\\r'
+            		        {
+            		        	Match('\r'); 
+            		        
+            		        }
+            		        break;
+            		
+            		}
+
+            		Match('\n'); 
             	
             	}
 
-            	Match('\n'); 
             
             }
     
@@ -446,53 +536,53 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CS_COMMENT;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:12: ( '###' ( options {greedy=false; } : . )* '###' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:14: '###' ( options {greedy=false; } : . )* '###'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:12: ( '###' ( options {greedy=false; } : . )* '###' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:14: '###' ( options {greedy=false; } : . )* '###'
             {
             	Match("###"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:20: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:20: ( options {greedy=false; } : . )*
             	do 
             	{
-            	    int alt3 = 2;
-            	    int LA3_0 = input.LA(1);
+            	    int alt8 = 2;
+            	    int LA8_0 = input.LA(1);
             	    
-            	    if ( (LA3_0 == '#') )
+            	    if ( (LA8_0 == '#') )
             	    {
-            	        int LA3_1 = input.LA(2);
+            	        int LA8_1 = input.LA(2);
             	        
-            	        if ( (LA3_1 == '#') )
+            	        if ( (LA8_1 == '#') )
             	        {
-            	            int LA3_3 = input.LA(3);
+            	            int LA8_3 = input.LA(3);
             	            
-            	            if ( (LA3_3 == '#') )
+            	            if ( (LA8_3 == '#') )
             	            {
-            	                alt3 = 2;
+            	                alt8 = 2;
             	            }
-            	            else if ( ((LA3_3 >= '\u0000' && LA3_3 <= '\"') || (LA3_3 >= '$' && LA3_3 <= '\uFFFE')) )
+            	            else if ( ((LA8_3 >= '\u0000' && LA8_3 <= '\"') || (LA8_3 >= '$' && LA8_3 <= '\uFFFE')) )
             	            {
-            	                alt3 = 1;
+            	                alt8 = 1;
             	            }
             	            
             	        
             	        }
-            	        else if ( ((LA3_1 >= '\u0000' && LA3_1 <= '\"') || (LA3_1 >= '$' && LA3_1 <= '\uFFFE')) )
+            	        else if ( ((LA8_1 >= '\u0000' && LA8_1 <= '\"') || (LA8_1 >= '$' && LA8_1 <= '\uFFFE')) )
             	        {
-            	            alt3 = 1;
+            	            alt8 = 1;
             	        }
             	        
             	    
             	    }
-            	    else if ( ((LA3_0 >= '\u0000' && LA3_0 <= '\"') || (LA3_0 >= '$' && LA3_0 <= '\uFFFE')) )
+            	    else if ( ((LA8_0 >= '\u0000' && LA8_0 <= '\"') || (LA8_0 >= '$' && LA8_0 <= '\uFFFE')) )
             	    {
-            	        alt3 = 1;
+            	        alt8 = 1;
             	    }
             	    
             	
-            	    switch (alt3) 
+            	    switch (alt8) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:47: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:24:47: .
             			    {
             			    	MatchAny(); 
             			    
@@ -500,16 +590,16 @@ public class CombatAnalyzerLexer : Lexer
             			    break;
             	
             			default:
-            			    goto loop3;
+            			    goto loop8;
             	    }
             	} while (true);
             	
-            	loop3:
-            		;	// Stops C# compiler whinging that label 'loop3' has no statements
+            	loop8:
+            		;	// Stops C# compiler whinging that label 'loop8' has no statements
 
             	Match("###"); 
 
-            	channel=HIDDEN;
+            	skip();
             
             }
     
@@ -527,34 +617,34 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CS_LOG_MSG_SYS;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:16: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:18: LOGGING ( options {greedy=false; } : . )* NEWLINE
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:16: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:18: LOGGING ( options {greedy=false; } : . )* NEWLINE
             {
             	mLOGGING(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:26: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:26: ( options {greedy=false; } : . )*
             	do 
             	{
-            	    int alt4 = 2;
-            	    int LA4_0 = input.LA(1);
+            	    int alt9 = 2;
+            	    int LA9_0 = input.LA(1);
             	    
-            	    if ( (LA4_0 == '\r') )
+            	    if ( (LA9_0 == '\r') )
             	    {
-            	        alt4 = 2;
+            	        alt9 = 2;
             	    }
-            	    else if ( (LA4_0 == '\n') )
+            	    else if ( (LA9_0 == '\n') )
             	    {
-            	        alt4 = 2;
+            	        alt9 = 2;
             	    }
-            	    else if ( ((LA4_0 >= '\u0000' && LA4_0 <= '\t') || (LA4_0 >= '\u000B' && LA4_0 <= '\f') || (LA4_0 >= '\u000E' && LA4_0 <= '\uFFFE')) )
+            	    else if ( ((LA9_0 >= '\u0000' && LA9_0 <= '\t') || (LA9_0 >= '\u000B' && LA9_0 <= '\f') || (LA9_0 >= '\u000E' && LA9_0 <= '\uFFFE')) )
             	    {
-            	        alt4 = 1;
+            	        alt9 = 1;
             	    }
             	    
             	
-            	    switch (alt4) 
+            	    switch (alt9) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:53: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:53: .
             			    {
             			    	MatchAny(); 
             			    
@@ -562,15 +652,15 @@ public class CombatAnalyzerLexer : Lexer
             			    break;
             	
             			default:
-            			    goto loop4;
+            			    goto loop9;
             	    }
             	} while (true);
             	
-            	loop4:
-            		;	// Stops C# compiler whinging that label 'loop4' has no statements
+            	loop9:
+            		;	// Stops C# compiler whinging that label 'loop9' has no statements
 
             	mNEWLINE(); 
-            	channel=HIDDEN;
+            	skip();
             
             }
     
@@ -584,347 +674,383 @@ public class CombatAnalyzerLexer : Lexer
 
     override public void mTokens() // throws RecognitionException 
     {
-        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:8: ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS )
-        int alt5 = 15;
+        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:8: ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS )
+        int alt10 = 14;
         switch ( input.LA(1) ) 
         {
         case 'd':
         	{
-            int LA5_1 = input.LA(2);
+            int LA10_1 = input.LA(2);
             
-            if ( (LA5_1 == 'a') )
+            if ( (LA10_1 == 'a') )
             {
-                alt5 = 1;
+                alt10 = 1;
             }
             else 
             {
-                alt5 = 10;}
+                alt10 = 10;}
+            }
+            break;
+        case 'a':
+        	{
+            int LA10_2 = input.LA(2);
+            
+            if ( (LA10_2 == 'r') )
+            {
+                int LA10_15 = input.LA(3);
+                
+                if ( (LA10_15 == 'e') )
+                {
+                    int LA10_25 = input.LA(4);
+                    
+                    if ( (LA10_25 == ' ') )
+                    {
+                        int LA10_28 = input.LA(5);
+                        
+                        if ( (LA10_28 == 'w') )
+                        {
+                            alt10 = 2;
+                        }
+                        else if ( (LA10_28 == 'h') )
+                        {
+                            alt10 = 3;
+                        }
+                        else 
+                        {
+                            NoViableAltException nvae_d10s28 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 28, input);
+                        
+                            throw nvae_d10s28;
+                        }
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d10s25 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 25, input);
+                    
+                        throw nvae_d10s25;
+                    }
+                }
+                else 
+                {
+                    NoViableAltException nvae_d10s15 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 15, input);
+                
+                    throw nvae_d10s15;
+                }
+            }
+            else 
+            {
+                alt10 = 10;}
+            }
+            break;
+        case 'i':
+        	{
+            int LA10_3 = input.LA(2);
+            
+            if ( (LA10_3 == 's') )
+            {
+                int LA10_16 = input.LA(3);
+                
+                if ( (LA10_16 == ' ') )
+                {
+                    int LA10_26 = input.LA(4);
+                    
+                    if ( (LA10_26 == 'h') )
+                    {
+                        alt10 = 3;
+                    }
+                    else if ( (LA10_26 == 'w') )
+                    {
+                        alt10 = 2;
+                    }
+                    else 
+                    {
+                        NoViableAltException nvae_d10s26 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 26, input);
+                    
+                        throw nvae_d10s26;
+                    }
+                }
+                else 
+                {
+                    NoViableAltException nvae_d10s16 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 16, input);
+                
+                    throw nvae_d10s16;
+                }
+            }
+            else 
+            {
+                alt10 = 10;}
             }
             break;
         case 'w':
         	{
             switch ( input.LA(2) ) 
             {
-            case 'o':
-            	{
-                int LA5_13 = input.LA(3);
-                
-                if ( (LA5_13 == 'u') )
-                {
-                    int LA5_21 = input.LA(4);
-                    
-                    if ( (LA5_21 == 'n') )
-                    {
-                        int LA5_23 = input.LA(5);
-                        
-                        if ( (LA5_23 == 'd') )
-                        {
-                            int LA5_25 = input.LA(6);
-                            
-                            if ( (LA5_25 == 's') )
-                            {
-                                alt5 = 3;
-                            }
-                            else 
-                            {
-                                alt5 = 2;}
-                        }
-                        else 
-                        {
-                            NoViableAltException nvae_d5s23 =
-                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 23, input);
-                        
-                            throw nvae_d5s23;
-                        }
-                    }
-                    else 
-                    {
-                        NoViableAltException nvae_d5s21 =
-                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 21, input);
-                    
-                        throw nvae_d5s21;
-                    }
-                }
-                else 
-                {
-                    NoViableAltException nvae_d5s13 =
-                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 13, input);
-                
-                    throw nvae_d5s13;
-                }
-                }
-                break;
             case 'i':
             	{
-                alt5 = 5;
+                alt10 = 4;
+                }
+                break;
+            case 'o':
+            	{
+                alt10 = 2;
                 }
                 break;
             	default:
-                	alt5 = 10;
+                	alt10 = 10;
                 	break;}
         
             }
             break;
-        case 'a':
+        case 'h':
         	{
-            int LA5_3 = input.LA(2);
+            int LA10_5 = input.LA(2);
             
-            if ( (LA5_3 == 'r') )
+            if ( (LA10_5 == 'e') )
             {
-                alt5 = 4;
+                alt10 = 3;
             }
             else 
             {
-                alt5 = 10;}
+                alt10 = 10;}
             }
             break;
         case 'f':
         	{
             switch ( input.LA(2) ) 
             {
-            case 'r':
-            	{
-                alt5 = 8;
-                }
-                break;
             case 'o':
             	{
-                alt5 = 6;
+                alt10 = 5;
+                }
+                break;
+            case 'r':
+            	{
+                alt10 = 7;
                 }
                 break;
             	default:
-                	alt5 = 10;
+                	alt10 = 10;
                 	break;}
         
             }
             break;
         case 'o':
         	{
-            int LA5_5 = input.LA(2);
+            int LA10_7 = input.LA(2);
             
-            if ( (LA5_5 == 'f') )
+            if ( (LA10_7 == 'f') )
             {
-                alt5 = 7;
+                alt10 = 6;
             }
             else 
             {
-                alt5 = 10;}
+                alt10 = 10;}
             }
             break;
         case 'L':
         	{
-            int LA5_6 = input.LA(2);
+            int LA10_8 = input.LA(2);
             
-            if ( (LA5_6 == 'o') )
+            if ( (LA10_8 == 'o') )
             {
-                int LA5_19 = input.LA(3);
+                int LA10_23 = input.LA(3);
                 
-                if ( (LA5_19 == 'g') )
+                if ( (LA10_23 == 'g') )
                 {
-                    int LA5_22 = input.LA(4);
+                    int LA10_27 = input.LA(4);
                     
-                    if ( (LA5_22 == 'g') )
+                    if ( (LA10_27 == 'g') )
                     {
-                        int LA5_24 = input.LA(5);
+                        int LA10_29 = input.LA(5);
                         
-                        if ( (LA5_24 == 'i') )
+                        if ( (LA10_29 == 'i') )
                         {
-                            int LA5_26 = input.LA(6);
+                            int LA10_30 = input.LA(6);
                             
-                            if ( (LA5_26 == 'n') )
+                            if ( (LA10_30 == 'n') )
                             {
-                                int LA5_29 = input.LA(7);
+                                int LA10_31 = input.LA(7);
                                 
-                                if ( (LA5_29 == 'g') )
+                                if ( (LA10_31 == 'g') )
                                 {
-                                    int LA5_30 = input.LA(8);
+                                    int LA10_32 = input.LA(8);
                                     
-                                    if ( (LA5_30 == ' ') )
+                                    if ( (LA10_32 == ' ') )
                                     {
-                                        int LA5_31 = input.LA(9);
+                                        int LA10_33 = input.LA(9);
                                         
-                                        if ( (LA5_31 == 'c') )
+                                        if ( (LA10_33 == 'c') )
                                         {
-                                            int LA5_32 = input.LA(10);
+                                            int LA10_34 = input.LA(10);
                                             
-                                            if ( (LA5_32 == 'h') )
+                                            if ( (LA10_34 == 'h') )
                                             {
-                                                int LA5_33 = input.LA(11);
+                                                int LA10_35 = input.LA(11);
                                                 
-                                                if ( (LA5_33 == 'a') )
+                                                if ( (LA10_35 == 'a') )
                                                 {
-                                                    int LA5_34 = input.LA(12);
+                                                    int LA10_36 = input.LA(12);
                                                     
-                                                    if ( (LA5_34 == 't') )
+                                                    if ( (LA10_36 == 't') )
                                                     {
-                                                        int LA5_35 = input.LA(13);
+                                                        int LA10_37 = input.LA(13);
                                                         
-                                                        if ( (LA5_35 == ' ') )
+                                                        if ( (LA10_37 == ' ') )
                                                         {
-                                                            int LA5_36 = input.LA(14);
+                                                            int LA10_38 = input.LA(14);
                                                             
-                                                            if ( (LA5_36 == 't') )
+                                                            if ( (LA10_38 == 't') )
                                                             {
-                                                                int LA5_37 = input.LA(15);
+                                                                int LA10_39 = input.LA(15);
                                                                 
-                                                                if ( (LA5_37 == 'a') )
+                                                                if ( (LA10_39 == 'a') )
                                                                 {
-                                                                    int LA5_38 = input.LA(16);
+                                                                    int LA10_40 = input.LA(16);
                                                                     
-                                                                    if ( (LA5_38 == 'b') )
+                                                                    if ( (LA10_40 == 'b') )
                                                                     {
-                                                                        int LA5_39 = input.LA(17);
+                                                                        int LA10_41 = input.LA(17);
                                                                         
-                                                                        if ( ((LA5_39 >= '\u0000' && LA5_39 <= '\uFFFE')) )
+                                                                        if ( ((LA10_41 >= '\u0000' && LA10_41 <= '\uFFFE')) )
                                                                         {
-                                                                            alt5 = 15;
+                                                                            alt10 = 14;
                                                                         }
                                                                         else 
                                                                         {
-                                                                            alt5 = 9;}
+                                                                            alt10 = 8;}
                                                                     }
                                                                     else 
                                                                     {
-                                                                        NoViableAltException nvae_d5s38 =
-                                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 38, input);
+                                                                        NoViableAltException nvae_d10s40 =
+                                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 40, input);
                                                                     
-                                                                        throw nvae_d5s38;
+                                                                        throw nvae_d10s40;
                                                                     }
                                                                 }
                                                                 else 
                                                                 {
-                                                                    NoViableAltException nvae_d5s37 =
-                                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 37, input);
+                                                                    NoViableAltException nvae_d10s39 =
+                                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 39, input);
                                                                 
-                                                                    throw nvae_d5s37;
+                                                                    throw nvae_d10s39;
                                                                 }
                                                             }
                                                             else 
                                                             {
-                                                                NoViableAltException nvae_d5s36 =
-                                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 36, input);
+                                                                NoViableAltException nvae_d10s38 =
+                                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 38, input);
                                                             
-                                                                throw nvae_d5s36;
+                                                                throw nvae_d10s38;
                                                             }
                                                         }
                                                         else 
                                                         {
-                                                            NoViableAltException nvae_d5s35 =
-                                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 35, input);
+                                                            NoViableAltException nvae_d10s37 =
+                                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 37, input);
                                                         
-                                                            throw nvae_d5s35;
+                                                            throw nvae_d10s37;
                                                         }
                                                     }
                                                     else 
                                                     {
-                                                        NoViableAltException nvae_d5s34 =
-                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 34, input);
+                                                        NoViableAltException nvae_d10s36 =
+                                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 36, input);
                                                     
-                                                        throw nvae_d5s34;
+                                                        throw nvae_d10s36;
                                                     }
                                                 }
                                                 else 
                                                 {
-                                                    NoViableAltException nvae_d5s33 =
-                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 33, input);
+                                                    NoViableAltException nvae_d10s35 =
+                                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 35, input);
                                                 
-                                                    throw nvae_d5s33;
+                                                    throw nvae_d10s35;
                                                 }
                                             }
                                             else 
                                             {
-                                                NoViableAltException nvae_d5s32 =
-                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 32, input);
+                                                NoViableAltException nvae_d10s34 =
+                                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 34, input);
                                             
-                                                throw nvae_d5s32;
+                                                throw nvae_d10s34;
                                             }
                                         }
                                         else 
                                         {
-                                            NoViableAltException nvae_d5s31 =
-                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 31, input);
+                                            NoViableAltException nvae_d10s33 =
+                                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 33, input);
                                         
-                                            throw nvae_d5s31;
+                                            throw nvae_d10s33;
                                         }
                                     }
                                     else 
                                     {
-                                        NoViableAltException nvae_d5s30 =
-                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 30, input);
+                                        NoViableAltException nvae_d10s32 =
+                                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 32, input);
                                     
-                                        throw nvae_d5s30;
+                                        throw nvae_d10s32;
                                     }
                                 }
                                 else 
                                 {
-                                    NoViableAltException nvae_d5s29 =
-                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 29, input);
+                                    NoViableAltException nvae_d10s31 =
+                                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 31, input);
                                 
-                                    throw nvae_d5s29;
+                                    throw nvae_d10s31;
                                 }
                             }
                             else 
                             {
-                                NoViableAltException nvae_d5s26 =
-                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 26, input);
+                                NoViableAltException nvae_d10s30 =
+                                    new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 30, input);
                             
-                                throw nvae_d5s26;
+                                throw nvae_d10s30;
                             }
                         }
                         else 
                         {
-                            NoViableAltException nvae_d5s24 =
-                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 24, input);
+                            NoViableAltException nvae_d10s29 =
+                                new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 29, input);
                         
-                            throw nvae_d5s24;
+                            throw nvae_d10s29;
                         }
                     }
                     else 
                     {
-                        NoViableAltException nvae_d5s22 =
-                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 22, input);
+                        NoViableAltException nvae_d10s27 =
+                            new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 27, input);
                     
-                        throw nvae_d5s22;
+                        throw nvae_d10s27;
                     }
                 }
                 else 
                 {
-                    NoViableAltException nvae_d5s19 =
-                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 19, input);
+                    NoViableAltException nvae_d10s23 =
+                        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 23, input);
                 
-                    throw nvae_d5s19;
+                    throw nvae_d10s23;
                 }
             }
             else 
             {
-                alt5 = 10;}
+                alt10 = 10;}
             }
             break;
         case 'p':
         	{
-            int LA5_7 = input.LA(2);
+            int LA10_9 = input.LA(2);
             
-            if ( (LA5_7 == 'o') )
+            if ( (LA10_9 == 'o') )
             {
-                alt5 = 12;
+                alt10 = 9;
             }
             else 
             {
-                alt5 = 10;}
-            }
-            break;
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
-        	{
-            alt5 = 11;
+                alt10 = 10;}
             }
             break;
         case 'A':
@@ -956,8 +1082,6 @@ public class CombatAnalyzerLexer : Lexer
         case 'c':
         case 'e':
         case 'g':
-        case 'h':
-        case 'i':
         case 'j':
         case 'k':
         case 'l':
@@ -973,28 +1097,42 @@ public class CombatAnalyzerLexer : Lexer
         case 'y':
         case 'z':
         	{
-            alt5 = 10;
+            alt10 = 10;
+            }
+            break;
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        	{
+            alt10 = 11;
             }
             break;
         case '\n':
         case '\r':
         	{
-            alt5 = 13;
+            alt10 = 12;
             }
             break;
         case '#':
         	{
-            alt5 = 14;
+            alt10 = 13;
             }
             break;
         	default:
-        	    NoViableAltException nvae_d5s0 =
-        	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | WOUNDS | ARE_WOUNDED | WITH | FOR | OF | FROM | LOGGING | CHARS | DIGITS | POINTS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 5, 0, input);
+        	    NoViableAltException nvae_d10s0 =
+        	        new NoViableAltException("1:1: Tokens : ( DAMAGE | WOUND | HEAL | WITH | FOR | OF | FROM | LOGGING | POINTS | CHAR | DIGITS | NEWLINE | CS_COMMENT | CS_LOG_MSG_SYS );", 10, 0, input);
         
-        	    throw nvae_d5s0;
+        	    throw nvae_d10s0;
         }
         
-        switch (alt5) 
+        switch (alt10) 
         {
             case 1 :
                 // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:10: DAMAGE
@@ -1011,91 +1149,84 @@ public class CombatAnalyzerLexer : Lexer
                 }
                 break;
             case 3 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:23: WOUNDS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:23: HEAL
                 {
-                	mWOUNDS(); 
+                	mHEAL(); 
                 
                 }
                 break;
             case 4 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:30: ARE_WOUNDED
-                {
-                	mARE_WOUNDED(); 
-                
-                }
-                break;
-            case 5 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:42: WITH
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:28: WITH
                 {
                 	mWITH(); 
                 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:47: FOR
+            case 5 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:33: FOR
                 {
                 	mFOR(); 
                 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:51: OF
+            case 6 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:37: OF
                 {
                 	mOF(); 
                 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:54: FROM
+            case 7 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:40: FROM
                 {
                 	mFROM(); 
                 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:59: LOGGING
+            case 8 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:45: LOGGING
                 {
                 	mLOGGING(); 
                 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:67: CHARS
+            case 9 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:53: POINTS
                 {
-                	mCHARS(); 
+                	mPOINTS(); 
+                
+                }
+                break;
+            case 10 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:60: CHAR
+                {
+                	mCHAR(); 
                 
                 }
                 break;
             case 11 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:73: DIGITS
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:65: DIGITS
                 {
                 	mDIGITS(); 
                 
                 }
                 break;
             case 12 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:80: POINTS
-                {
-                	mPOINTS(); 
-                
-                }
-                break;
-            case 13 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:87: NEWLINE
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:72: NEWLINE
                 {
                 	mNEWLINE(); 
                 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:95: CS_COMMENT
+            case 13 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:80: CS_COMMENT
                 {
                 	mCS_COMMENT(); 
                 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:106: CS_LOG_MSG_SYS
+            case 14 :
+                // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:1:91: CS_LOG_MSG_SYS
                 {
                 	mCS_LOG_MSG_SYS(); 
                 
