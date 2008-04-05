@@ -32,8 +32,8 @@ NEWLINE	: ('\r'?'\n');
 
 // IGNORED LINES
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 24
-CS_COMMENT	: '###' (options {greedy=false;} : .)* '###' {skip();};
+CS_COMMENT	: '###' (options {greedy=false;} : .)* '###' {$channel=HIDDEN;};
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 25
-CS_LOG_MSG_SYS	: LOGGING (options {greedy=false;} : .)* NEWLINE {skip();};
+CS_LOG_MSG_SYS	: LOGGING (options {greedy=false;} : .)* NEWLINE {$channel=HIDDEN;};
 
 // PARSER LINES

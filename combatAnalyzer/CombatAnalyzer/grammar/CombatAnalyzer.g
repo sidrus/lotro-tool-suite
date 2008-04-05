@@ -21,8 +21,8 @@ DIGITS	: ('0'..'9')+;
 NEWLINE	: ('\r'?'\n');
 
 // IGNORED LINES
-CS_COMMENT	: '###' (options {greedy=false;} : .)* '###' {skip();};
-CS_LOG_MSG_SYS	: LOGGING (options {greedy=false;} : .)* NEWLINE {skip();};
+CS_COMMENT	: '###' (options {greedy=false;} : .)* '###' {$channel=HIDDEN;};
+CS_LOG_MSG_SYS	: LOGGING (options {greedy=false;} : .)* NEWLINE {$channel=HIDDEN;};
 
 // PARSER LINES
 chatLine: (CS_COMMENT|CS_LOG_MSG_SYS|combatLine|healLine)+;

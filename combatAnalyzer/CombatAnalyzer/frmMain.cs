@@ -168,7 +168,7 @@ namespace CombatAnalyzer
                     CommonTokenStream ts = new CommonTokenStream(lxr);
                     CombatAnalyzerParser parser = new CombatAnalyzerParser(ts);
 
-                    parser.combatLine();
+                    parser.chatLine();
                 }
                 catch (NoViableAltException nve)
                 {
