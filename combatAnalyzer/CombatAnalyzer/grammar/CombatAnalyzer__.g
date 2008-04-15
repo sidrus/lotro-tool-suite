@@ -1,34 +1,29 @@
 lexer grammar CombatAnalyzer;
-options {
-  language=CSharp;
 
-}
-
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 10
-DAMAGE	: 'damage';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 11
-WOUND	: ('are '|'is ')? 'wound' ('ed'|'s')?;
+DAMAGE	: 'damage';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 12
-HEAL	: ('are '|'is ')? 'heal' ('ed'|'s')?;
+WOUND	: ('are '|'is ')? 'wound' ('ed'|'s')?;
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 13
-REFLECT	: 'reflect' 's'?;
+HEAL	: ('are '|'is ')? 'heal' ('ed'|'s')?;
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 14
-WITH	: 'with';
+REFLECT	: 'reflect' 's'?;
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 15
-FOR	: 'for';
+WITH	: 'with';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 16
-OF	: 'of';
+FOR		: 'for';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 17
-FROM	: 'from';
+OF		: 'of';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 18
-LOGGING	: 'Logging chat tab';
+FROM	: 'from';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 19
-POINTS	: ('point' 's'?);
+LOGGING	: 'Logging chat tab';
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 20
-CHAR	: ('a'..'z'|'A'..'Z');
+POINTS	: ('point' 's'?);
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 21
+CHAR	: ('a'..'z'|'A'..'Z');
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 22
 DIGITS	: ('0'..'9')+;
-//NAME	: CHAR+;
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 23
 NEWLINE	: ('\r'?'\n');
 
@@ -36,8 +31,23 @@ NEWLINE	: ('\r'?'\n');
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 26
 CL_COMMENT	: '###' (options {greedy=false;} : .)* '###' {$channel=HIDDEN;};
 // $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 27
-CL_SYS_MSG	: LOGGING (options {greedy=false;} : .)* NEWLINE {$channel=HIDDEN;};
-// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 28
-CL_REFLECT_LINE : CHAR+ ' ' REFLECT (options {greedy=false;} : .)* NEWLINE {$channel=HIDDEN;};
+CL_SYS_MSG	: LOGGING (options {greedy=false;} : .)* NEWLINE 
+{
+	$channel=HIDDEN;
+};
+
+// $ANTLR src "C:\Users\Brandon\Documents\Visual Studio 2005\Projects\CombatAnalyzer\CombatAnalyzer\grammar\CombatAnalyzer.g" 32
+CL_REFLECT_LINE returns [String text] : 
+	(CHAR {$text+=$CHAR.text;})+ 
+	(' ' {$text+=" ";} )
+	(REFLECT {$text+=$REFLECT.text;}) 
+	(options {greedy=false;} : .)*
+	NEWLINE 
+	
+	{
+		//System.Windows.Forms.MessageBox.Show($CL_REFLECT_LINE.text);
+		//$channel=HIDDEN;
+	};
 
 // PARSER LINES
+//chatLine: (CL_COMMENT|CL_SYS_MSG|CL_REFLECT_LINE|combatLine|healLine)+;

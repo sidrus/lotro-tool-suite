@@ -67,6 +67,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="grammar\CombatAnalyzer.g" />
     <None Include="grammar\CombatAnalyzer.tokens" />
     <None Include="grammar\CombatAnalyzer__.g" />

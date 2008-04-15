@@ -1,4 +1,4 @@
-// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 01:19:58
+// $ANTLR 3.0.1 C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g 2008-04-05 02:44:04
 
 using System;
 using Antlr.Runtime;
@@ -310,8 +310,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = FOR;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:5: ( 'for' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:7: 'for'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:6: ( 'for' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:15:8: 'for'
             {
             	Match("for"); 
 
@@ -332,8 +332,8 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = OF;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:4: ( 'of' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:6: 'of'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:5: ( 'of' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:16:7: 'of'
             {
             	Match("of"); 
 
@@ -533,13 +533,13 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = NEWLINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:9: ( ( ( '\\r' )? '\\n' ) )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:11: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:9: ( ( ( '\\r' )? '\\n' ) )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:11: ( ( '\\r' )? '\\n' )
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: ( '\\r' )? '\\n'
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:11: ( ( '\\r' )? '\\n' )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )? '\\n'
             	{
-            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: ( '\\r' )?
+            		// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: ( '\\r' )?
             		int alt8 = 2;
             		int LA8_0 = input.LA(1);
             		
@@ -550,7 +550,7 @@ public class CombatAnalyzerLexer : Lexer
             		switch (alt8) 
             		{
             		    case 1 :
-            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:23:12: '\\r'
+            		        // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:22:12: '\\r'
             		        {
             		        	Match('\r'); 
             		        
@@ -580,12 +580,12 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CL_COMMENT;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:12: ( '###' ( options {greedy=false; } : . )* '###' )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:14: '###' ( options {greedy=false; } : . )* '###'
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:12: ( '###' ( options {greedy=false; } : . )* '###' )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:14: '###' ( options {greedy=false; } : . )* '###'
             {
             	Match("###"); 
 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:20: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:20: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt9 = 2;
@@ -626,7 +626,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt9) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:47: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:25:47: .
             			    {
             			    	MatchAny(); 
             			    
@@ -661,11 +661,11 @@ public class CombatAnalyzerLexer : Lexer
         try 
     	{
             int _type = CL_SYS_MSG;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:12: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:14: LOGGING ( options {greedy=false; } : . )* NEWLINE
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:12: ( LOGGING ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:14: LOGGING ( options {greedy=false; } : . )* NEWLINE
             {
             	mLOGGING(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:22: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:22: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt10 = 2;
@@ -688,7 +688,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt10) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:27:49: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:26:49: .
             			    {
             			    	MatchAny(); 
             			    
@@ -704,7 +704,9 @@ public class CombatAnalyzerLexer : Lexer
             		;	// Stops C# compiler whinging that label 'loop10' has no statements
 
             	mNEWLINE(); 
-            	channel=HIDDEN;
+            	
+            		channel=HIDDEN;
+
             
             }
     
@@ -719,13 +721,19 @@ public class CombatAnalyzerLexer : Lexer
     // $ANTLR start CL_REFLECT_LINE 
     public void mCL_REFLECT_LINE() // throws RecognitionException [2]
     {
+
+        string text = null;
+    
         try 
     	{
             int _type = CL_REFLECT_LINE;
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:17: ( ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE )
-            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: ( CHAR )+ ' ' REFLECT ( options {greedy=false; } : . )* NEWLINE
+            Token CHAR1 = null;
+            Token REFLECT2 = null;
+    
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:31:39: ( ( CHAR )+ ( ' ' ) ( REFLECT ) ( options {greedy=false; } : . )* NEWLINE )
+            // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:2: ( CHAR )+ ( ' ' ) ( REFLECT ) ( options {greedy=false; } : . )* NEWLINE
             {
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: ( CHAR )+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:2: ( CHAR )+
             	int cnt11 = 0;
             	do 
             	{
@@ -741,9 +749,12 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt11) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:19: CHAR
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:32:3: CHAR
             			    {
+            			    	int CHAR1Start247 = CharIndex;
             			    	mCHAR(); 
+            			    	CHAR1 = new CommonToken(input, Token.INVALID_TOKEN_TYPE, Token.DEFAULT_CHANNEL, CHAR1Start247, CharIndex-1);
+            			    	text+=CHAR1.Text;
             			    
             			    }
             			    break;
@@ -760,9 +771,25 @@ public class CombatAnalyzerLexer : Lexer
             	loop11:
             		;	// Stops C# compiler whinging that label 'loop11' has no statements
 
-            	Match(' '); 
-            	mREFLECT(); 
-            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:37: ( options {greedy=false; } : . )*
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:2: ( ' ' )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:33:3: ' '
+            	{
+            		Match(' '); 
+            		text+=" ";
+            	
+            	}
+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:34:2: ( REFLECT )
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:34:3: REFLECT
+            	{
+            		int REFLECT2Start264 = CharIndex;
+            		mREFLECT(); 
+            		REFLECT2 = new CommonToken(input, Token.INVALID_TOKEN_TYPE, Token.DEFAULT_CHANNEL, REFLECT2Start264, CharIndex-1);
+            		text+=REFLECT2.Text;
+            	
+            	}
+
+            	// C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:35:2: ( options {greedy=false; } : . )*
             	do 
             	{
             	    int alt12 = 2;
@@ -785,7 +812,7 @@ public class CombatAnalyzerLexer : Lexer
             	    switch (alt12) 
             		{
             			case 1 :
-            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:28:64: .
+            			    // C:\\Users\\Brandon\\Documents\\Visual Studio 2005\\Projects\\CombatAnalyzer\\CombatAnalyzer\\grammar\\CombatAnalyzer.g:35:29: .
             			    {
             			    	MatchAny(); 
             			    
@@ -801,7 +828,10 @@ public class CombatAnalyzerLexer : Lexer
             		;	// Stops C# compiler whinging that label 'loop12' has no statements
 
             	mNEWLINE(); 
-            	channel=HIDDEN;
+            	
+            			//System.Windows.Forms.MessageBox.Show(text);
+            			//channel=HIDDEN;
+            		
             
             }
     
@@ -978,6 +1008,11 @@ public class CombatAnalyzerLexer : Lexer
                     {
                         switch ( input.LA(5) ) 
                         {
+                        case 'w':
+                        	{
+                            alt13 = 2;
+                            }
+                            break;
                         case 'h':
                         	{
                             alt13 = 3;
@@ -986,11 +1021,6 @@ public class CombatAnalyzerLexer : Lexer
                         case 'r':
                         	{
                             alt13 = 16;
-                            }
-                            break;
-                        case 'w':
-                        	{
-                            alt13 = 2;
                             }
                             break;
                         	default:
@@ -1105,14 +1135,14 @@ public class CombatAnalyzerLexer : Lexer
                         alt13 = 16;
                         }
                         break;
-                    case 'h':
-                    	{
-                        alt13 = 3;
-                        }
-                        break;
                     case 'w':
                     	{
                         alt13 = 2;
+                        }
+                        break;
+                    case 'h':
+                    	{
+                        alt13 = 3;
                         }
                         break;
                     	default:
@@ -1696,19 +1726,6 @@ public class CombatAnalyzerLexer : Lexer
                                 {
                                     switch ( input.LA(8) ) 
                                     {
-                                    case 's':
-                                    	{
-                                        int LA13_74 = input.LA(9);
-                                        
-                                        if ( (LA13_74 == ' ' || (LA13_74 >= 'A' && LA13_74 <= 'Z') || (LA13_74 >= 'a' && LA13_74 <= 'z')) )
-                                        {
-                                            alt13 = 16;
-                                        }
-                                        else 
-                                        {
-                                            alt13 = 4;}
-                                        }
-                                        break;
                                     case ' ':
                                     case 'A':
                                     case 'B':
@@ -1763,6 +1780,19 @@ public class CombatAnalyzerLexer : Lexer
                                     case 'z':
                                     	{
                                         alt13 = 16;
+                                        }
+                                        break;
+                                    case 's':
+                                    	{
+                                        int LA13_75 = input.LA(9);
+                                        
+                                        if ( (LA13_75 == ' ' || (LA13_75 >= 'A' && LA13_75 <= 'Z') || (LA13_75 >= 'a' && LA13_75 <= 'z')) )
+                                        {
+                                            alt13 = 16;
+                                        }
+                                        else 
+                                        {
+                                            alt13 = 4;}
                                         }
                                         break;
                                     	default:
@@ -2406,6 +2436,19 @@ public class CombatAnalyzerLexer : Lexer
                         {
                             switch ( input.LA(6) ) 
                             {
+                            case 's':
+                            	{
+                                int LA13_68 = input.LA(7);
+                                
+                                if ( (LA13_68 == ' ' || (LA13_68 >= 'A' && LA13_68 <= 'Z') || (LA13_68 >= 'a' && LA13_68 <= 'z')) )
+                                {
+                                    alt13 = 16;
+                                }
+                                else 
+                                {
+                                    alt13 = 10;}
+                                }
+                                break;
                             case ' ':
                             case 'A':
                             case 'B':
@@ -2460,19 +2503,6 @@ public class CombatAnalyzerLexer : Lexer
                             case 'z':
                             	{
                                 alt13 = 16;
-                                }
-                                break;
-                            case 's':
-                            	{
-                                int LA13_69 = input.LA(7);
-                                
-                                if ( (LA13_69 == ' ' || (LA13_69 >= 'A' && LA13_69 <= 'Z') || (LA13_69 >= 'a' && LA13_69 <= 'z')) )
-                                {
-                                    alt13 = 16;
-                                }
-                                else 
-                                {
-                                    alt13 = 10;}
                                 }
                                 break;
                             	default:
