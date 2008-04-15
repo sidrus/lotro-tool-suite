@@ -163,12 +163,12 @@ namespace CombatAnalyzer
             {
                 try
                 {
-                    afs = new ANTLRFileStream(dlg.FileName);
-                    CombatAnalyzerLexer lxr = new CombatAnalyzerLexer(afs);
-                    CommonTokenStream ts = new CommonTokenStream(lxr);
-                    CombatAnalyzerParser parser = new CombatAnalyzerParser(ts);
+                    //afs = new ANTLRFileStream(dlg.FileName);
+                    //CombatAnalyzerLexer lxr = new CombatAnalyzerLexer(afs);
+                    //CommonTokenStream ts = new CommonTokenStream(lxr);
+                    //CombatAnalyzerParser parser = new CombatAnalyzerParser(ts);
 
-                    parser.combatLine();
+                    //parser.combatLine();
                 }
                 catch (Antlr.Runtime.NoViableAltException nve)
                 {
