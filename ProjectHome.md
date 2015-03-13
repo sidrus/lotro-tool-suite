@@ -1,0 +1,1 @@
+The LOTRO Tool Suite contains several applications that enable gamers to better manager their LOTRO characters.  It includes a combat analyzer, trait calculator, and a recipe manager.  These tools will enable character owners to fine tune their characters for their specific game play style.
