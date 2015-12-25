@@ -1,0 +1,12 @@
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\CombatAnalyzer.exe
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\CombatAnalyzer.pdb
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\antlr.runtime.dll
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\Antlr3.Runtime.dll
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\Antlr3.Utility.dll
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\bin\Debug\StringTemplate.dll
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.csprojResolveAssemblyReference.cache
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.frmMain.resources
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.Properties.Resources.resources
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.csproj.GenerateResource.Cache
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.exe
+S:\software\projects\lotro-tool-suite\combatAnalyzer\CombatAnalyzer\obj\Debug\CombatAnalyzer.pdb
